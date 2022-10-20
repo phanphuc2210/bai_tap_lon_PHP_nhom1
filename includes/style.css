@@ -11,7 +11,7 @@
 
 
 /* general*/
-a {
+/* a {
 	color:#777;
 	text-decoration:none;
 }
@@ -19,7 +19,7 @@ a {
 a:hover {
 	color:#333;
 	text-decoration:none;
-}
+} */
 
 /* body */
 /* body {
@@ -29,7 +29,7 @@ a:hover {
 } */
 
 body {
-	background-image: url(../img/background.jpg);
+	background-image: url(../Images/background.jpg);
 	background-position: center;
 	background-size: cover;
 }

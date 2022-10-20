@@ -14,6 +14,19 @@
 - Bootstrap
 
 ## Phân công
-1. làm gì đó
-2. Làm gì ta
-3. làm gì không biết
+1. Trang thông tin: Phúc
+1. Trang bài tập
+    1. Form : Phúc
+    1. Array & String: Hoàng
+    1. OOP: Hoàng
+    1. Database: Hoàng
+    1. Send Mail: Phúc
+1. Website demo (CRUD bảng Sản Phẩm)
+    1. Tạo CSDL: Phúc
+    1. Chức năng hiển thị sản phẩm: Hoàng
+    1. Chức năng thêm sản phẩm: Hoàng
+    1. Chức năng sửa sản phẩm: Phúc
+    1. Chức năng xóa sản phẩm: Phúc
+    1. Chức năng tìm kiếm sản phẩm: Hoàng
+1. Đăng nhập & đăng xuất: Phúc
+1. Trang mở rộng (Trang trợ giúp hoặc gì đó): Hoàng
