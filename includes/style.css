@@ -4,22 +4,26 @@
 	Website	:	http://www.edg3.co.uk/
 */
 * {
-	border:0;
 	margin:0;
 	padding:0;
+	box-sizing: border-box;
 }
 
-
 /* general*/
-/* a {
-	color:#777;
-	text-decoration:none;
+a {
+	color: #fff;
+	text-decoration:none !important;
 }
 
 a:hover {
-	color:#333;
-	text-decoration:none;
-} */
+	color: #9FB6CD;
+} 
+
+.text-origin {
+	background: -webkit-linear-gradient(#eee, #333);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 
 /* body */
 /* body {
@@ -27,12 +31,6 @@ a:hover {
 	color:#555;
 	font:0.8em Arial, Helvetica, "bitstream vera sans", sans-serif;
 } */
-
-body {
-	background-image: url(../Images/background.jpg);
-	background-position: center;
-	background-size: cover;
-}
 
 /* header */
 /* #header {
@@ -88,7 +86,7 @@ body {
 
 /* content */
 #content {
-	height:100vh;
+	min-height:100vh;
 	/* margin:0 auto;
 	padding:0 0 20px;
 	width:751px; */
@@ -127,3 +125,24 @@ input, select, .input {
 	background: #FFFFFF;
 	border:1px dotted #004080;
 } */
+
+/* Trang chủ */
+.index {
+	background-image: url(../Images/background.jpg);
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+
+/* SideBar phần bài tập */
+.sidebar-bt ul {
+	list-style-type: none;
+}
+
+.sidebar-bt .exercises {
+	padding-left: 4px;
+} 
+
+	
+
+	
