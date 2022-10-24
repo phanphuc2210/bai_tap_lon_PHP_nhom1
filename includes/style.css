@@ -10,13 +10,23 @@
 }
 
 /* general*/
+.w-20 {
+	width: 20%;
+}
+
+.w-80 {
+	width: 80%;
+}
+
 a {
 	color: #fff;
+	cursor: pointer;
 	text-decoration:none !important;
 }
 
 a:hover {
 	color: #9FB6CD;
+	text-decoration: underline;
 } 
 
 .text-origin {
@@ -131,7 +141,7 @@ input, select, .input {
 	background-image: url(../Images/background.jpg);
 	background-position: center;
 	background-size: cover;
-	height: 100vh;
+	min-height: 100vh;
 }
 
 /* SideBar phần bài tập */
@@ -142,6 +152,10 @@ input, select, .input {
 .sidebar-bt .exercises {
 	padding-left: 4px;
 } 
+
+.exercises ul {
+	padding-left: 16px;
+}
 
 	
 
