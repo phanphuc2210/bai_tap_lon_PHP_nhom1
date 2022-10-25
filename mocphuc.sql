@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 23, 2022 at 02:54 PM
+-- Generation Time: Oct 25, 2022 at 09:28 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -81,22 +81,23 @@ CREATE TABLE `khach_hang` (
   `Phai` tinyint(1) NOT NULL,
   `Dia_chi` varchar(200) NOT NULL,
   `Dien_thoai` varchar(11) NOT NULL,
-  `Email` varchar(100) NOT NULL
+  `Email` varchar(100) NOT NULL,
+  `Password` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `khach_hang`
 --
 
-INSERT INTO `khach_hang` (`Ma_khach_hang`, `Ten_khach_hang`, `Phai`, `Dia_chi`, `Dien_thoai`, `Email`) VALUES
-('KH001', 'Lê Thanh Trang', 1, '123 Nguyễn Khuyến, Vĩnh Hải', '0946702313', 'tranglt@gmail.com'),
-('KH002', 'Lê Văn Thanh', 0, '52KA Cù Lao Trung, Vĩnh Thọ', '0120345621', 'thanhlv@gmail.com'),
-('KH003', 'Phan Thị Mỹ Hạnh', 1, '54KA Cù Lao Trung, Vĩnh Thọ', '9745698', 'hanhptn@gmail.com'),
-('KH004', 'Nguyễn Trọng Hiếu', 0, '39 Tôn Thất Tùng, Vĩnh Thọ', '8769128', 'hieunt@gmai.com'),
-('KH005', 'Hoàng Minh Quân', 0, '86 đường 2/4, Vĩnh Phước', '5792564', 'quanhm@gmail.com'),
-('KH006', 'Nguyễn Thị Thu Thảo', 1, '53 Hùng Lộc Hầu, Vĩnh Ngọc', '9874125', 'thaontt@gmail.com'),
-('KH007', 'Nguyễn Khánh Duy', 0, '45 Nguyễn Khuyến, Vĩnh Hải', '8754123', 'duynk@gmail.com'),
-('KH008', 'Phan Ngọc Thịnh', 0, '23 Lạc Thiện, Vĩnh Hải', '8753159', 'thinhpn@gmail.com');
+INSERT INTO `khach_hang` (`Ma_khach_hang`, `Ten_khach_hang`, `Phai`, `Dia_chi`, `Dien_thoai`, `Email`, `Password`) VALUES
+('KH001', 'Lê Thanh Trang', 1, '123 Nguyễn Khuyến, Vĩnh Hải', '0946702313', 'tranglt@gmail.com', '12345678'),
+('KH002', 'Lê Văn Thanh', 0, '52KA Cù Lao Trung, Vĩnh Thọ', '0120345621', 'thanhlv@gmail.com', '111111111'),
+('KH003', 'Phan Thị Mỹ Hạnh', 1, '54KA Cù Lao Trung, Vĩnh Thọ', '9745698', 'hanhptn@gmail.com', '87635421'),
+('KH004', 'Nguyễn Trọng Hiếu', 0, '39 Tôn Thất Tùng, Vĩnh Thọ', '8769128', 'hieunt@gmai.com', '87654321'),
+('KH005', 'Hoàng Minh Quân', 0, '86 đường 2/4, Vĩnh Phước', '5792564', 'quanhm@gmail.com', '98763542'),
+('KH006', 'Nguyễn Thị Thu Thảo', 1, '53 Hùng Lộc Hầu, Vĩnh Ngọc', '9874125', 'thaontt@gmail.com', '01234598'),
+('KH007', 'Nguyễn Khánh Duy', 0, '45 Nguyễn Khuyến, Vĩnh Hải', '8754123', 'duynk@gmail.com', '87456210'),
+('KH008', 'Phan Ngọc Thịnh', 0, '23 Lạc Thiện, Vĩnh Hải', '8753159', 'thinhpn@gmail.com', '12231245');
 
 -- --------------------------------------------------------
 
