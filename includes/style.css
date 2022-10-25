@@ -14,8 +14,16 @@
 	width: 20%;
 }
 
+.w-30 {
+	width: 30%;
+}
+
 .w-80 {
 	width: 80%;
+}
+
+.bg-transparent-50 {
+	background-color: rgba(0,0,0,.5);
 }
 
 a {
@@ -155,6 +163,35 @@ input, select, .input {
 
 .exercises ul {
 	padding-left: 16px;
+}
+
+/* Footer */
+.footer ul li {
+    list-style: none;
+}
+
+.footer li a {
+    color: rgba(255,255,255,.5);
+    text-decoration: none;
+}
+
+.footer li a:hover {
+    color: rgba(255,255,255,.9);
+}
+
+.footer h3 {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.footer h3:before {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 50px;
+	height: 2px;
+	background: #DC3545;
 }
 
 	
