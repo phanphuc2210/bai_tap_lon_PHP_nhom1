@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Thiết kế form tính diện tích hình chữ nhật';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 <style type="text/css">
     /* body {

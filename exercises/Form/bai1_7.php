@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Form nhập liệu với danh sách dạng list box';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 
 <div class="d-flex">

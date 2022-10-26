@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Phép tính trên 2 số';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 
 <style type="text/css">

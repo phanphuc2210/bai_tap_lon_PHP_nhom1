@@ -25,20 +25,23 @@
 			<li><a href="#">link five</a></li>
 		</ul>
 	</div> -->
-
+	
+	<?php 
+	$path_array = explode('/', $_SERVER['PHP_SELF']);
+	?>
 	<nav class="navbar navbar-expand-lg bg-light">
 		<div class="container">
 			<a class="navbar-brand" href="/"><h3 class="fw-bold text-origin">Nhóm 1</h3></a>
 			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav">
+				<ul class="navbar-nav fw-bold">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Trang chủ</a>
+						<a class="nav-link <?php echo $path_array[1] == 'index.php'? 'active' : ''; ?>" aria-current="page" href="/">Trang chủ</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Thông tin</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/exercises">Bài tập</a>
+						<a class="nav-link <?php echo $path_array[1] == 'exercises'? 'active' : ''; ?>" href="/exercises">Bài tập</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">Web demo</a>
@@ -53,4 +56,4 @@
 	</nav>
 
 	<div id="content"><!-- Start of the page-specific content. -->
-<!-- Script 9.1 - header.html -->
+<!-- Script 9.1 - header.php -->

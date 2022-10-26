@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Login';
-include ('includes/header.html');
+include ('includes/header.php');
 ?>
 <div class="index d-flex flex-column align-items-center justify-content-center">
     <form class="d-flex bg-transparent-50 rounded-3 flex-column w-30 p-4" method="post" action="">

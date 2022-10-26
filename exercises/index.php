@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Trang bài tập!';
-include ('../includes/header.html');
+include ('../includes/header.php');
 ?>
 
 <div class="d-flex">

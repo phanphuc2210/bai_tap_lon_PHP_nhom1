@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Nhập thông tin';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 <style>
     form {
