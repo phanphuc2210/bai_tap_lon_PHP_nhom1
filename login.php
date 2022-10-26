@@ -19,13 +19,29 @@ include ('includes/header.php');
             <label for="pass" class="form-label text-origin fw-bold">Mật khẩu</label>
             <input type="password" class="form-control" id="pass" name="pass">
         </div>
-
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="showPass">
+            <label class="form-check-label text-white" for="showPass">
+                Hiển thị mật khẩu.
+            </label>
+        </div>
 
         <button class="btn btn-dark mx-auto mt-3" type="submit"><span class="text-origin fw-bold">ĐĂNG NHẬP</span></button>
     </form>
-
-    
 </div>
+
+<!-- Xử lý ẩn hiện mật khẩu -->
+<script>
+    var checkbox = document.querySelector('#showPass')
+    var pass = document.querySelector('#pass')
+    checkbox.addEventListener('change', (e) => {
+        if(e.target.checked) {
+            pass.type = "text"
+        } else {
+            pass.type = "password"
+        }
+    })
+</script>
 <?php
 include ('includes/footer.html');
 ?>
