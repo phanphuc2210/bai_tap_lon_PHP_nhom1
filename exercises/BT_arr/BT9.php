@@ -1,13 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mang ghep</title>
-</head>
-<body>
-    <?php
-        
+<?php # Script 3.4 - index.php
+$page_title = 'Thiết kế Form Đếm phần tử, ghép mảng và sắp xếp';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 9:</u>Thiết kế Form Đếm phần tử, ghép mảng và sắp xếp</a></h2>
+    <?php  
         if(isset($_POST['mangA']) && isset($_POST['mangB'])){
             $mangA = $_POST['mangA'];
             $arrA = explode(", ", $mangA);
@@ -79,5 +80,8 @@
             </tr>
         </table>
     </form>
-</body>
-</html>
+    </div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>

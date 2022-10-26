@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Trận</title>
-</head>
-<body>
+<?php # Script 3.4 - index.php
+$page_title = 'Tạo và hiển thị ma trận số nguyên';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 10:</u>Tạo và hiển thị ma trận số nguyên</a></h2>
     <?php
         if(isset($_POST['txtSTN']))
             $first = trim($_POST['txtGBD']);
@@ -38,5 +40,8 @@
         </tr>
         </table>
     </form>
-</body>
-</html>
+    </div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>

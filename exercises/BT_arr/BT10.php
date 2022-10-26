@@ -1,31 +1,33 @@
-<!DOCTYPE html>
 <?php
 session_start();
 $str ='';
         if (isset($_POST['rank']) && isset($_POST['namesong']) && isset($_POST['add'])){
             $_SESSION["arr"][$_POST['rank']] = $_POST['namesong'];
         }
-        foreach ($_SESSION['arr'] as $key => $value){
-            $str .= $key.'. '. $value."\n";
-        }
-
-        if(isset($_POST['show']) ){
-            ksort($_SESSION['arr']);
-            $str = '';
+        if(isset($_SESSION['arr'])){
             foreach ($_SESSION['arr'] as $key => $value){
                 $str .= $key.'. '. $value."\n";
             }
-            session_reset();
+            if(isset($_POST['show']) ){
+                ksort($_SESSION['arr']);
+                $str = '';
+                foreach ($_SESSION['arr'] as $key => $value){
+                    $str .= $key.'. '. $value."\n";
+                }
+                session_reset();
+            }
         }
 ?>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sort Song</title>
-</head>
-<body>
+<?php # Script 3.4 - index.php
+$page_title = 'Tạo form xếp hạng bài hát';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 10:</u>Tạo form xếp hạng bài hát</a></h2>
     <form action="" method="post">
         <table style="width:500px;" align="center" bgcolor="#20B2AA" cellpadding="2" cellspacing="2">
             <tr bgcolor="#008080">
@@ -53,5 +55,8 @@ $str ='';
             </tr>
         </table>
     </form>
-</body>
-</html>
+    </div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>

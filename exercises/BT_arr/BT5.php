@@ -1,39 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-
-<html>
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<title>Mang tim kiem</title>
-
-<style type="text/css">
-
-	table{
-
-		color: #ffff00;
-
-		background-color: gray;		
-
-	}
-
-	table th{
-
-		background-color: blue;
-
-		font-style: vni-times;
-
-		color: yellow;
-
-	}
-
-</style>
-
-</head>
-
-<body>
-
+<?php # Script 3.4 - index.php
+$page_title = 'Thiết kế Form Phát sinh mảng và tính toán';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 5:</u>Thiết kế Form Phát sinh mảng và tính toán</a></h2>
 <?php
 $n = '';
 function makeArr(){
@@ -156,8 +130,10 @@ if(isset($_POST['tinh'])){
 </table>
 
 </form>
+</div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>
 
-</body>
-
-</html>
 
