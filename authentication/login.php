@@ -1,10 +1,10 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Login';
-include ('includes/header.php');
+include ('../includes/header.php');
 ?>
 
 <?php 
-require_once './database.php';
+require_once '../database/connect.php';
 $errors = [];
 $tenDN = isset($_POST['tenDN'])? $_POST['tenDN'] : '';
 $pass = isset($_POST['pass'])? $_POST['pass'] : '';
@@ -84,5 +84,5 @@ if(isset($_POST['login'])) {
     })
 </script>
 <?php
-include ('includes/footer.html');
+include ('../includes/footer.html');
 ?>

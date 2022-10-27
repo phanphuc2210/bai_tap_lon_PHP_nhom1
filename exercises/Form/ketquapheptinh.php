@@ -30,7 +30,7 @@ include ('../../includes/header.php');
 
 <div class="d-flex">
     <?php 
-    include ('../includes/sidebar.html');
+    include ('../../includes/sidebar_exercises.html');
     ?>
     <div class="w-80 p-3">
     <h3 class="mb-4"><u class="fw-bold text-origin">Bài 2.3:</u> Tạo trang web thực hiện phép tính trên 2 số</a></h2>

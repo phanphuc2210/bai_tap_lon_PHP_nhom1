@@ -5,7 +5,7 @@ include ('../includes/header.php');
 
 <div class="d-flex">
     <?php 
-    include ('./includes/sidebar.html');
+    include ('../includes/sidebar_exercises.html');
     ?>
     <div class="index w-80 d-flex flex-column justify-content-center align-items-center text-white">
         <!-- ================== Phần thay đổi nằm ở đây =========================== -->

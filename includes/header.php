@@ -37,7 +37,7 @@ session_start();
 	$isLogin = isset($_SESSION['isLogin'])? $_SESSION['isLogin'] : false;
 	$username = isset($_SESSION['Username'])? $_SESSION['Username'] : '';
 	if($path_array[1] == 'exercises' && $isLogin == false) {
-		header("Location: /login.php");
+		header("Location: /authentication/login.php");
 	}
 	?>
 	<nav class="navbar navbar-expand-lg bg-light py-1">
@@ -67,10 +67,10 @@ session_start();
 				echo "<div class='d-flex align-items-center'>
 						<img style='width: 40px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
 						<span class='ms-1'>Chào, ". $username ."!</span>
-						<a href='/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
+						<a href='/authentication/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
 					</div>";
 			} else {
-				echo "<a href='/login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
+				echo "<a href='/authentication/login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
 			}
 			?>
 		</div>

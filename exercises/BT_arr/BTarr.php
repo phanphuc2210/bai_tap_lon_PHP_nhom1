@@ -4,7 +4,7 @@ include ('../../includes/header.php');
 ?>
 <div class="d-flex">
     <?php 
-    include ('../includes/sidebar.html');
+    include ('../../includes/sidebar_exercises.html');
     ?>
     <div class="w-80 p-3">
 		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 10:</u>Tạo và hiển thị ma trận số nguyên</a></h2>
