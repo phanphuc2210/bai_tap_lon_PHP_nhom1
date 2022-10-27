@@ -1,0 +1,1 @@
+Mã số: 123, Tên Nhân Viên: hoàng, Ngày sinh: 2001-09-09, Giới tính: Nam, Chức vụ: NV, Số ngày công: 10, Tiền Thưởng: 70

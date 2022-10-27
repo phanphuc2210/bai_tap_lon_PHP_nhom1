@@ -1,53 +1,14 @@
-<?php 
-    $gv1 = new GiangVien('abc','NT','nu','Tiến sĩ');
-    echo $gv1->getTrinhdo();
+<?php # Script 3.4 - index.php
+$page_title = 'Tạo các lớp đơn giản';
+include ('../../includes/header.html');
 ?>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-
-<html>
-
-<head>
-
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
-<title>Tinh chu vi va dien tich</title>
-
-<style>
-
-fieldset {
-
-  background-color: #eeeeee;
-
-}
-
-
-
-legend {
-
-  background-color: gray;
-
-  color: white;
-
-  padding: 5px 10px;
-
-}
-
-
-
-input {
-
-  margin: 5px;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Tạo các lớp đơn giản</a></h2>
 <?php 
-
 class Person {
     protected $hoTen;
     protected $diaChi;
@@ -291,7 +252,8 @@ if(isset($_POST['tinh'])){
         lh.removeAttribute('disabled');
     })
 </script>
-
-</body>
-
-</html>
+</div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>
