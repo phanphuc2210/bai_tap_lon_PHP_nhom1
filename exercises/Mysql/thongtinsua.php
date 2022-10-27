@@ -1,15 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Thông tin sữa</title>
-    <style>
-        tr:nth-child(even){
-            background-color: bisque;
-        }   
-    </style>
-</head>
-<body>
+<?php # Script 3.4 - index.php
+$page_title = 'Hiển Thị Thông Tin Hãng Sữa';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 2:</u>Hiển Thị Thông Tin Hãng Sữa</a></h2>
 <?php
   // Ket noi CSDL
 require("connect.php");
@@ -133,5 +131,8 @@ size='5'> THÔNG TIN SỮA</font></P>";
 // }
 // echo"</table>";
 ?>
-</body>
-</html>
+    </div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>

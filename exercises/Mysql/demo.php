@@ -1,3 +1,13 @@
+<?php # Script 3.4 - index.php
+$page_title = 'Hiển thị thông tin khách hàng';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Hiển thị thông tin khách hàng</a></h2>
 <?php
 // 1. Ket noi CSDL
 $conn = mysqli_connect('localhost', 'root', '', 'qlbansua')
@@ -14,22 +24,25 @@ echo "
         <td>Địa chỉ</td>
         <td>phái</td>
         <td>SĐT</td>
-        <td>meo</td>
+        <td>mail</td>
     </tr>
 ";
 if(mysqli_num_rows($result)!=0){
 while ($row = mysqli_fetch_array($result))
 { 
-    // for ($i=0; $i<mysqli_num_fields($result); $i++)
-    // echo $row[$i] . " ";
     echo "
     <tr>
         <td>$row[Ma_khach_hang]</td>
         <td>$row[Ten_khach_hang]</td>
         <td>$row[Dia_chi]</td>
-        <td>
+        <td>";
+          if($row['Phai'] == 1){
+            echo "<img width='50px' src='./img/female.jpg' />";
+          } else {
+            echo "<img width='50px' src='./img/Male.png' />";
             
-        </td>
+          }  
+    echo "</td>
         <td>$row[Dien_thoai]</td>
         <td>$row[Email]</td>
     </tr>";
@@ -40,4 +53,9 @@ echo "</table>";
 // 5. Xoa ket qua khoi vung nho va Dong ket noi
 mysqli_free_result($result);
 mysqli_close($conn);
+?>
+</div>
+</div>
+<?php
+include ('../../includes/footer.html');
 ?>
