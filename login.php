@@ -10,6 +10,14 @@ $tenDN = isset($_POST['tenDN'])? $_POST['tenDN'] : '';
 $pass = isset($_POST['pass'])? $_POST['pass'] : '';
 
 if(isset($_POST['login'])) {
+    if($tenDN == '') {
+        $errors[] = "Tên đăng nhập không được trống.";
+    }
+
+    if($pass == '') {
+        $errors[] = "Mật khẩu không được trống.";
+    }
+
     if($tenDN != '' && $pass != '') {
         $sql = "SELECT Ma_nhan_vien , Ten_nhan_vien
                 FROM nhan_vien 
@@ -22,25 +30,32 @@ if(isset($_POST['login'])) {
             $_SESSION['Username'] = mysqli_fetch_array($result)['Ten_nhan_vien'];
             header("Location: /");
         } else {
-            echo "Đăng nhập thất bại";
+            $errors[] = "Tên đăng nhập hoặc mật khẩu không chính xác.";
         }
     } 
 }
 ?>
 
 <div class="index d-flex flex-column align-items-center justify-content-center">
-    <form class="d-flex bg-transparent-50 rounded-3 flex-column w-30 p-4" method="post" action="">
+    
+    <?php 
+    if(count($errors)) {
+        echo "<div class='w-30 p-3 bg-danger opacity-75 rounded-3 mb-4'>";
+        foreach($errors as $error) {
+            echo "<p class='text-white mb-0'>$error</p>";
+        }
+        echo "</div>";
+    }
+    ?>
+    
+    <form class="d-flex bg-transparent-50 rounded-3 flex-column w-30 p-4 needs-validation" method="post" action="">
         <h1 class="text-center fw-bold text-origin mb-3">Đăng nhập tài khoản</h3>
-
-        <!-- @if (ViewBag.error != null)
-        {
-            <p class="text-center text-danger fw-bold">@ViewBag.error</p>
-        } -->
-
+        
         <div class="mb-3">
             <label for="tenDN" class="form-label text-origin fw-bold">Tên đăng nhập</label>
             <input required type="text" class="form-control" id="tenDN" name="tenDN" value="<?php echo $tenDN; ?>" placeholder="vd: nv001">
         </div>
+
         <div class="mb-3">
             <label for="pass" class="form-label text-origin fw-bold">Mật khẩu</label>
             <input required type="password" class="form-control" id="pass" name="pass">
