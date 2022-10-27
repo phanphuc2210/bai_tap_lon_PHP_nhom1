@@ -20,8 +20,12 @@ include ('../../includes/header.php');
         echo "Điện thoại: ".$_POST['sdt']."<br>";
         echo "Quốc tịch: ".$_POST['quoctich']."<br>";
         echo "Môn học: ";
-        foreach($_POST['monhoc'] as $mh){
-            echo $mh.", ";
+        if (count($_POST['monhoc']) > 0) {
+            foreach($_POST['monhoc'] as $mh){
+                echo $mh.", ";
+            }
+        } else {
+            echo "";
         }
         echo "<br>";
         echo "Ghi chú: ".$_POST['ghichu']."<br><br>";

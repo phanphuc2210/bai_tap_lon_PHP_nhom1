@@ -49,7 +49,7 @@ include ('../../includes/header.php');
                 <tr>
                     <td>Họ tên:</td>
                     <td>
-                        <input type="text" name="hoten" require/>
+                        <input required type="text" name="hoten" require/>
                         
                     </td>
                 </tr>
@@ -57,14 +57,14 @@ include ('../../includes/header.php');
                 <tr>
                     <td>Địa chỉ:</td>
                     <td>
-                        <input type="text" name="diachi" re/>
+                        <input required type="text" name="diachi" re/>
                     </td>
                 </tr>
 
                 <tr>
                     <td>Số điện thoại:</td>
                     <td>
-                        <input type="text" name="sdt"/>
+                        <input required type="text" name="sdt"/>
                     </td> 
                 </tr>
 
