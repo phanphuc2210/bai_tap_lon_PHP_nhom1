@@ -35,12 +35,12 @@ session_start();
 	
 	// Phải đăng nhập thì mới có thể truy cập
 	$isLogin = isset($_SESSION['isLogin'])? $_SESSION['isLogin'] : false;
-	var_dump($isLogin);
+	$username = isset($_SESSION['Username'])? $_SESSION['Username'] : '';
 	if($path_array[1] == 'exercises' && $isLogin == false) {
 		header("Location: /login.php");
 	}
 	?>
-	<nav class="navbar navbar-expand-lg bg-light">
+	<nav class="navbar navbar-expand-lg bg-light py-1">
 		<div class="container">
 			<a class="navbar-brand" href="/"><h3 class="fw-bold text-origin">Nhóm 1</h3></a>
 			<div class="collapse navbar-collapse" id="navbarNav">
@@ -62,7 +62,17 @@ session_start();
 					</li>
 				</ul>
 			</div>
-			<a href="/login.php" class="btn btn-dark">Đăng nhập</a>
+			<?php 
+			if($_SESSION['isLogin']) {
+				echo "<div class='d-flex align-items-center'>
+						<img style='width: 40px;' class='rounded-circle' src='../Images/avatar.jpg' alt='avatar'>
+						<span class='ms-1'>Chào, ". $username ."!</span>
+						<a href='/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
+					</div>";
+			} else {
+				echo "<a href='/login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
+			}
+			?>
 		</div>
 	</nav>
 

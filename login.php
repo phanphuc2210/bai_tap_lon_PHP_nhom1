@@ -11,7 +11,7 @@ $pass = isset($_POST['pass'])? $_POST['pass'] : '';
 
 if(isset($_POST['login'])) {
     if($tenDN != '' && $pass != '') {
-        $sql = "SELECT Ma_nhan_vien 
+        $sql = "SELECT Ma_nhan_vien , Ten_nhan_vien
                 FROM nhan_vien 
                 WHERE Tai_khoan = '$tenDN' AND Password = '$pass'
             ";
@@ -19,6 +19,7 @@ if(isset($_POST['login'])) {
         
         if(mysqli_num_rows($result) > 0) {
             $_SESSION['isLogin'] = true;
+            $_SESSION['Username'] = mysqli_fetch_array($result)['Ten_nhan_vien'];
             header("Location: /");
         } else {
             echo "Đăng nhập thất bại";
