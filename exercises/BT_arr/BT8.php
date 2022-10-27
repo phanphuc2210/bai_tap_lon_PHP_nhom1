@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Thiết kế Form Sắp xếp mảng';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 <div class="d-flex">
     <?php 
