@@ -2,6 +2,31 @@
 $page_title = 'Login';
 include ('includes/header.php');
 ?>
+
+<?php 
+require_once './database.php';
+$errors = [];
+$tenDN = isset($_POST['tenDN'])? $_POST['tenDN'] : '';
+$pass = isset($_POST['pass'])? $_POST['pass'] : '';
+
+if(isset($_POST['login'])) {
+    if($tenDN != '' && $pass != '') {
+        $sql = "SELECT Ma_nhan_vien 
+                FROM nhan_vien 
+                WHERE Tai_khoan = '$tenDN' AND Password = '$pass'
+            ";
+        $result = mysqli_query($conn, $sql);
+        
+        if(mysqli_num_rows($result) > 0) {
+            $_SESSION['isLogin'] = true;
+            header("Location: /");
+        } else {
+            echo "Đăng nhập thất bại";
+        }
+    } 
+}
+?>
+
 <div class="index d-flex flex-column align-items-center justify-content-center">
     <form class="d-flex bg-transparent-50 rounded-3 flex-column w-30 p-4" method="post" action="">
         <h1 class="text-center fw-bold text-origin mb-3">Đăng nhập tài khoản</h3>
@@ -13,11 +38,11 @@ include ('includes/header.php');
 
         <div class="mb-3">
             <label for="tenDN" class="form-label text-origin fw-bold">Tên đăng nhập</label>
-            <input type="text" class="form-control" id="tenDN" name="tenDN" placeholder="vd: nv001">
+            <input required type="text" class="form-control" id="tenDN" name="tenDN" value="<?php echo $tenDN; ?>" placeholder="vd: nv001">
         </div>
         <div class="mb-3">
             <label for="pass" class="form-label text-origin fw-bold">Mật khẩu</label>
-            <input type="password" class="form-control" id="pass" name="pass">
+            <input required type="password" class="form-control" id="pass" name="pass">
         </div>
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="showPass">
@@ -26,7 +51,7 @@ include ('includes/header.php');
             </label>
         </div>
 
-        <button class="btn btn-dark mx-auto mt-3" type="submit"><span class="text-origin fw-bold">ĐĂNG NHẬP</span></button>
+        <button class="btn btn-dark mx-auto mt-3" name="login" type="submit"><span class="text-origin fw-bold">ĐĂNG NHẬP</span></button>
     </form>
 </div>
 
