@@ -1,15 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Thông tin Khách Hàng</title>
-    <style>
-        tr:nth-child(even){
-            background-color: bisque;
-        }   
-    </style>
-</head>
-<body>
+<?php # Script 3.4 - index.php
+$page_title = 'Hiển thị, Xóa, Sửa thông tin khách hàng';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 7:</u>Hiển thị, Xóa, Sửa thông tin khách hàng</a></h2>
 <?php
   // Ket noi CSDL
 require("connect.php");
@@ -27,7 +25,7 @@ LIMIT '. $offset . ', ' .$rowsPerPage);
 echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif'
 size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
 // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
- echo "<table align='center' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+ echo "<table align='center' width='1000' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
  echo '<tr>
     <th width="50">Mã KH</th>
      <th width="250">Tên Khách Hàng</th>
@@ -86,6 +84,9 @@ size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
 
 }
 ?>
-</body>
 <script src="https://kit.fontawesome.com/8973f61f8c.js" crossorigin="anonymous"></script>
-</html>
+</div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>

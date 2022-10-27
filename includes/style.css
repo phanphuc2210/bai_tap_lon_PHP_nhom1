@@ -35,6 +35,10 @@ a:hover {
 	-webkit-text-fill-color: transparent;
 }
 
+table, th, td {
+	border: 1px solid;
+  }
+
 /* body */
 /* body {
 	background:#ffffff;

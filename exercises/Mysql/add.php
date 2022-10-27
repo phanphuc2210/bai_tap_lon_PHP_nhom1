@@ -1,10 +1,13 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Thêm sữa mới</title>
-</head>
-<body>
+<?php # Script 3.4 - index.php
+$page_title = 'Thêm sữa mới';
+include ('../../includes/header.html');
+?>
+<div class="d-flex">
+    <?php 
+    include ('../includes/sidebar.html');
+    ?>
+    <div class="w-80 p-3">
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 6:</u>Thêm sữa mới</a></h2>
 <?php
   // Ket noi CSDL
   require("connect.php");
@@ -154,5 +157,8 @@ if(isset($_POST['add'])){
 
         </table>
     </form>
-</body>
-</html>
+    </div>
+</div>
+<?php
+include ('../../includes/footer.html');
+?>
