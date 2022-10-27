@@ -26,15 +26,18 @@
 	background-color: rgba(0,0,0,.5);
 }
 
-a {
+a{
+	text-decoration:none;
+}
+
+.link-origin {
 	color: #fff;
 	cursor: pointer;
 	text-decoration:none !important;
 }
 
-a:hover {
+.link-origin:hover {
 	color: #9FB6CD;
-	text-decoration: underline;
 } 
 
 .text-origin {
