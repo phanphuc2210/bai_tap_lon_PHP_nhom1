@@ -1,7 +1,7 @@
 
 <?php # Script 3.4 - index.php
 $page_title = 'Hiển thị thông tin sữa dạng list';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 <div class="d-flex">
     <?php 

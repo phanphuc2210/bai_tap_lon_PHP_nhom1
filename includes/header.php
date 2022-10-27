@@ -65,7 +65,7 @@ session_start();
 			<?php 
 			if($isLogin) {
 				echo "<div class='d-flex align-items-center'>
-						<img style='width: 40px;' class='rounded-circle' src='../Images/avatar.jpg' alt='avatar'>
+						<img style='width: 40px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
 						<span class='ms-1'>Chào, ". $username ."!</span>
 						<a href='/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
 					</div>";

@@ -1,6 +1,6 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Hiển Thị Thông Tin Hãng Sữa';
-include ('../../includes/header.html');
+include ('../../includes/header.php');
 ?>
 <div class="d-flex">
     <?php 
