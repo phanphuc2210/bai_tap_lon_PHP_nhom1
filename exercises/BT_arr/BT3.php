@@ -2,6 +2,18 @@
 $page_title = 'Thiết kế Form tìm năm âm lịch';
 include ('../../includes/header.php');
 ?>
+<style>
+    table{
+		color: #000;
+		background-color: #d0ddd3;		
+	}
+
+	table th{
+		background-color: #329998;
+		font-style: vni-times;
+		color: white;
+	}
+</style>
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -36,9 +48,9 @@ include ('../../includes/header.php');
         else $al = "";
     ?>
     <form action="" method="post">
-        <table width="400" align="center">
+    <table>
             <tr>
-                <td colspan="3" align="center">Tính năm âm lịch</td>
+                <th colspan="3" align="center"><h2 style="text-align: center;">TÍNH NĂM ÂM LỊCH</h2></th>
             </tr>
             <tr>
                 <td align="center">Năm dương lịch</td>
@@ -46,12 +58,14 @@ include ('../../includes/header.php');
                 <td align="center">Năm âm lịch</td>
             </tr>
             <tr>
-                <td><input type="text" name="dl" value="<?php echo $dl; ?>"/></td>
-                <td><input type="submit" name="btnXacNhan" value="=>"/></td>
-                <td><input type="text" name="al" disabled="disabled" value="<?php echo $al; ?>"/></td>
+                <td><input type="text" name="dl" value="<?php if (isset($_POST['dl'])) echo $_POST['dl']; ?>" size="20"></td>
+                <td style="padding: 0 26px;"><input type="submit" name="btnXacNhan" value="=>"></td>
+                <td><input type="text" name="al" value="<?php echo $al; ?>" size="20" disabled></td>
             </tr>
             <tr>
-                <td colspan="3" align="center"><?php echo $hinh_anh; ?></td>
+                <td colspan="3" align="center">
+                    <?php echo $hinh_anh; ?>
+                </td>
             </tr>
         </table>
     </form>

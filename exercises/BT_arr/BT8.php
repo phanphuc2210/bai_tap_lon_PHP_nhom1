@@ -46,7 +46,7 @@ include ('../../includes/header.php');
         else $chuoi ="";
 
         if(isset($_POST['btnSapXep'])){
-            $arr = explode(", ",$chuoi);
+            $arr = explode(",",$chuoi);
             $mang_tang = sap_xep_tang($arr);
             $in_chuoi_tang = implode(", ",$mang_tang);
             $mang_giam = sap_xep_giam($arr);

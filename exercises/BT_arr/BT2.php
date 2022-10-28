@@ -2,6 +2,7 @@
 $page_title = 'Thiết kế Form tìm năm nhuận';
 include ('../../includes/header.php');
 ?>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -72,7 +73,7 @@ include ('../../includes/header.php');
             <?php echo $kq;  ?>
         </p>
         <input type="submit" value="Tìm năm nhuận" name="small">
-        <h5>Năm nhập vào lớn hơn năm 2000</h5>
+        <h5 style="margin-top: 32px;">Năm nhập vào lớn hơn năm 2000</h5>
         <h5>Tìm Năm Nhuận</h5>
         <label for="year">Năm: </label>
         <input type="text" name="bigger" value=" <?php if(isset($b)) { echo trim($b);}; ?>" required placeholder="0">

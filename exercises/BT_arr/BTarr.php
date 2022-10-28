@@ -2,6 +2,23 @@
 $page_title = 'Tạo và hiển thị ma trận số nguyên';
 include ('../../includes/header.php');
 ?>
+<style>
+    table{
+		color: #000;
+		background-color: pink;		
+	}
+
+	table th{
+		background-color: purple;
+		font-style: vni-times;
+		color: white;
+	}
+
+    td {
+        padding: 4px;
+    }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -80,28 +97,28 @@ include ('../../includes/header.php');
     <form action="" method="POST">
         <table align="center">
             <tr>
-                <th colspan="5" align="center"><h3><font color="blue">MA TRẬN</font></h3></th>
+                <th colspan="3" align="center"><h3><font color="blue">MA TRẬN</font></h3></th>
             </tr>
             <tr>
-        <td>Nhập số dòng: </td>
-        <td>
-            <input type="text" name="col" value="" placeholder="0"/>
-        </td>
-        <td><span id='error1'>(2 <= cột <= 5)</span></td>
-        </tr>
-        <tr>
-            <td>Nhập số cột: </td>
-            <td>
-                <input type="text" name="row" value="" placeholder="0"/>
-            </td>
-            <td><span id='error1'>(2 <= dòng <= 5)</span></td>
-        </tr>
-        <tr>
-            <td colspan = "2" align="center"><input type="submit" name="thuchien" value="Tính"/></td>
-        </tr>
-        <tr>
-            <td><textarea name="kq" id="" cols="30" rows="10" readonly="true" style="resize: none;"><?php echo $kq  ?></textarea></td>
-        </tr>
+                <td>Nhập số dòng: </td>
+                <td>
+                    <input type="text" name="col" value="" placeholder="0"/>
+                </td>
+                <td><span id='error1'>(2 <= cột <= 5)</span></td>
+            </tr>
+            <tr>
+                <td>Nhập số cột: </td>
+                <td>
+                    <input type="text" name="row" value="" placeholder="0"/>
+                </td>
+                <td><span id='error1'>(2 <= dòng <= 5)</span></td>
+            </tr>
+            <tr>
+                <td colspan = "3" align="center"><input type="submit" name="thuchien" value="Tính"/></td>
+            </tr>
+            <tr>
+                <td colspan="3"><textarea name="kq" id="" cols="70" rows="10" readonly="true" style="resize: none;"><?php echo $kq  ?></textarea></td>
+            </tr>
         </table>
     </form>
     </div>

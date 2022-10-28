@@ -2,6 +2,19 @@
 $page_title = 'Thiết kế Form Phát sinh mảng và tính toán';
 include ('../../includes/header.php');
 ?>
+<style>
+	table{
+		color: #ffff00;
+		background-color: gray;		
+	}
+
+	table th{
+		background-color: blue;
+		font-style: vni-times;
+		color: yellow;
+	}
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -9,7 +22,7 @@ include ('../../includes/header.php');
     <div class="w-80 p-3">
 		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 5:</u>Thiết kế Form Phát sinh mảng và tính toán</a></h2>
 <?php
-$n = '';
+$n = isset($_POST['mang'])? $_POST['mang'] : '';
 function makeArr(){
     $n = $_POST['mang'];
 	$arr = array();
@@ -52,7 +65,6 @@ function Fmin($arr){
             $min = $arr[$i];
         }
     }
-	echo $min;
     return $min;
 }
 

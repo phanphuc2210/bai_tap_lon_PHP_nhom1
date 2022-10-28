@@ -2,6 +2,22 @@
 $page_title = ' Một số thao tác trên mảng số nguyên';
 include ('../../includes/header.php');
 ?>
+<style>
+    fieldset {
+            display: inline-block;
+            background-color: #d0ddd3;
+        }
+
+        legend {
+            background-color: #329998;
+            padding: 5px 10px;
+        }
+
+        input {
+            margin: 5px;
+        }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -126,7 +142,7 @@ include ('../../includes/header.php');
         </fieldset>
         <?php
         if(!empty($arr)){
-
+            echo '<br/>';
             echo sochan($arr);
             echo '<br/>';
             lastLe($arr,$n);

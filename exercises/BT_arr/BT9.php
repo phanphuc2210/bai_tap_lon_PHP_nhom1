@@ -11,11 +11,11 @@ include ('../../includes/header.php');
     <?php  
         if(isset($_POST['mangA']) && isset($_POST['mangB'])){
             $mangA = $_POST['mangA'];
-            $arrA = explode(", ", $mangA);
+            $arrA = explode(",", $mangA);
             $sptA = count($arrA);
 
             $mangB = $_POST['mangB'];
-            $arrB = explode(", ", $mangB);
+            $arrB = explode(",", $mangB);
             $sptB = count($arrB);
 
             $mangC = array_merge($arrA,$arrB);

@@ -24,10 +24,7 @@ include ('../../includes/header.php');
         }
 
         function xuat_mang_moi($a){
-            for($i = 0; $i < count($a); $i++){
-                $in_chuoi_moi = implode(", ", $a);
-            }
-            return $in_chuoi_moi;
+            return implode(', ', $a);
         }
 
         if(isset($_POST['gtctt']))
@@ -40,7 +37,7 @@ include ('../../includes/header.php');
 
         if(isset($_POST['btnThayThe'])){
             $chuoi = $_POST['mang'];
-            $a = explode(", ", $chuoi);
+            $a = explode(",", $chuoi);
             $in_chuoi = implode(", ", $a);
             $tt = thay_the($a, $gtctt, $gttt);
             $mang_moi = xuat_mang_moi($tt);

@@ -2,6 +2,19 @@
 $page_title = 'Thiết kế Form Tìm kiếm';
 include ('../../includes/header.php');
 ?>
+<style>
+	table{
+		color: #ffff00;
+		background-color: gray;		
+	}
+
+	table th{
+		background-color: blue;
+		font-style: vni-times;
+		color: yellow;
+	}
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');

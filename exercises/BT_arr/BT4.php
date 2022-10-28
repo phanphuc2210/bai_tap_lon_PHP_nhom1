@@ -2,6 +2,23 @@
 $page_title = 'Thiết kế Form nhập và tính trên dãy số';
 include ('../../includes/header.php');
 ?>
+<style>
+	table{
+		color: #ffff00;
+		background-color: gray;		
+	}
+
+	table th{
+		background-color: blue;
+		font-style: vni-times;
+		color: yellow;
+	}
+
+	td {
+		padding: 4px;
+	}
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -28,9 +45,7 @@ $kq = '';
 
 if(isset($_POST['tinh'])){
 	$str=$_POST['mang'];
-	echo $str;
 	$arr=explode(",",$str);
-	print_r($arr);
     $kq = tongdayso($arr);
 
 	$path = 'dulieu_bai2.txt';
@@ -55,7 +70,7 @@ if (!$fp){
 
 <table border="0" cellpadding="0">
 
-	<th colspan="2"><h2>NHẬP VÀ TÍNH TRÊN DÃY SỐ</h2></th>
+	<th colspan="2"><h2 style="text-align: center;">NHẬP VÀ TÍNH TRÊN DÃY SỐ</h2></th>
 
 	<tr>
 
