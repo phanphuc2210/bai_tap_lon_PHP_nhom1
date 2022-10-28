@@ -2,12 +2,34 @@
 $page_title = 'Phép tính trên phân số';
 include ('../../includes/header.php');
 ?>
+<style>
+    form {
+        display: inline-block;
+        padding: 4px;
+        background-color: #d24dff;
+    }
+
+    table {
+        background: #ffd94d;
+        padding: 12px;
+        border: 0 solid yellow;
+    }
+
+    th {
+        color: purple;
+    }
+
+    td {
+        padding: 8px 0;
+    }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
     ?>
     <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Phép tính trên phân số</a></h2>
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 3:</u>Phép tính trên phân số</a></h2>
 <?php
 
 function UCLN($a, $b){

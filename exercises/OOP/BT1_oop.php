@@ -2,6 +2,18 @@
 $page_title = 'Tạo các lớp đơn giản';
 include ('../../includes/header.php');
 ?>
+<style>
+    table {
+        margin: 0 auto;
+        background: #ffd94d;
+        border: 0 solid yellow;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -132,18 +144,14 @@ if(isset($_POST['tinh'])){
 ?>
 
 <form action="" method="post">
-
 <fieldset>
-
-	<legend>Quản lý Thông Tin GV-SV</legend>
-
+	<legend class="text-center fw-bold">Quản lý Thông Tin GV-SV</legend>
 	<table border='0'>
-
-        <tr><td>Nhập tên:</td><td><input type="text"  name="name" value="<?php if(isset($_POST['ten'])) echo $_POST['name'];?>"/></td></tr>
+        <tr><td>Nhập tên:</td><td><input type="text"  name="name" value="<?php if(isset($_POST['name'])) echo $_POST['name'];?>"/></td></tr>
         <tr><td>Địa chỉ:</td><td><input type="text"  name="dc" value="<?php if(isset($_POST['dc'])) echo $_POST['dc'];?>"/></td></tr>
         <tr><td>Giới tính:</td>
             <td>
-                <input type="radio"  name="gender" value="Nam"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nam') echo 'checked="checked"';?>/>
+                <input type="radio"  name="gender" checked value="Nam"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nam') echo 'checked="checked"';?>/>
                 <label for="">Nam</label>
                 <input type="radio"  name="gender" value="Nu"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nu') echo 'checked="checked"';?>/>
                 <label for="">Nữ</label>

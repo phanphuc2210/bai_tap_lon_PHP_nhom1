@@ -2,12 +2,42 @@
 $page_title = 'Quản lý thông tin nhân viên';
 include ('../../includes/header.php');
 ?>
+<style>
+    form {
+        display: inline-block;
+        padding: 4px;
+        background-color: #d24dff;
+    }
+
+    legend {
+        text-align: center;
+    }
+
+    table {
+        background: #ffd94d;
+        padding: 12px;
+        border: 0 solid yellow;
+    }
+
+    th, td {
+        padding: 4px;
+    }
+
+    th {
+        background-color: white;
+    }
+
+    td {
+        padding-right: 24px;
+    }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
     ?>
     <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Quản lý thông tin nhân viên</a></h2>
+		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 2:</u>Quản lý thông tin nhân viên</a></h2>
 <?php
 
 abstract class NhanVien {
