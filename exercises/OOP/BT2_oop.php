@@ -97,7 +97,7 @@ class NVSanXuat extends NhanVien {
 
     function tinhTienLuong()
     {
-        return ($this->soSP > $this->dongiaSP) + $this->tinhTienThuong();   
+        return ($this->soSP > self::dongiaSP) + $this->tinhTienThuong();   
     }
 }
 

@@ -145,7 +145,7 @@ if(isset($_POST['tinh'])){
             <td>
                 <input type="radio"  name="gender" value="Nam"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nam') echo 'checked="checked"';?>/>
                 <label for="">Nam</label>
-                <input type="radio"  name="gender" value="Nu"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nu') echo 'checked="checked"';?>/>
+                <input type="radio"  name="gender" value="Nữ"<?php if(isset($_POST['gender'])&&$_POST['gender']=='Nu') echo 'checked="checked"';?>/>
                 <label for="">Nữ</label>
             </td>
         </tr>

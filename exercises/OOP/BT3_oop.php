@@ -94,9 +94,21 @@ if(isset($_POST['tinh']) && isset($_POST['cal'])){
     if(isset($_POST['mau1'])){
         $mau1=$_POST['mau1'];
     }
+
+    if($mau != 0 ){
+        $ps1 = new PhanSo($tu,$mau);
+        if($ms2 != 0 ){
+            $ps2 = new PhanSo($tu1,$mau1);
+        } else{
+            echo "Mẫu số phân số 2 phải khác 0";
+            return 0;
+        }
+    }
+    else{
+        echo "Mẫu số phân số 1 phải khác 0";
+        return 0;
+    }
     
-    $ps1 = new PhanSo($tu,$mau);
-    $ps2 = new PhanSo($tu1,$mau1);
     switch($_POST['cal']){
         case 'plus':
             $kq = $ps1->Cong($ps2);
