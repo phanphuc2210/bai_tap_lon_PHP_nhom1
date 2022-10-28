@@ -52,7 +52,6 @@ function Fmin($arr){
             $min = $arr[$i];
         }
     }
-	echo $min;
     return $min;
 }
 

@@ -11,21 +11,21 @@ include ('../../includes/header.html');
     <?php  
         if(isset($_POST['mangA']) && isset($_POST['mangB'])){
             $mangA = $_POST['mangA'];
-            $arrA = explode(", ", $mangA);
+            $arrA = explode(",", $mangA);
             $sptA = count($arrA);
 
             $mangB = $_POST['mangB'];
-            $arrB = explode(", ", $mangB);
+            $arrB = explode(",", $mangB);
             $sptB = count($arrB);
 
             $mangC = array_merge($arrA,$arrB);
-            $arrC = implode(", ",$mangC);
+            $arrC = implode(",",$mangC);
 
             sort($mangC);
-            $tdC = implode(", ",$mangC);
+            $tdC = implode(",",$mangC);
 
             rsort($mangC);
-            $gdC = implode(", ", $mangC);
+            $gdC = implode(",", $mangC);
         }
         else {
             $mangA="";
@@ -76,7 +76,7 @@ include ('../../includes/header.html');
                 <td><input type="text" name="gdC" value="<?php echo $gdC; ?>" disabled="disabled" size="40"/></td>
             </tr>
             <tr >
-                <td colspan="2" align="center" ><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ", ")</label></td>
+                <td colspan="2" align="center" ><label>(Các phần tử trong mảng sẽ cách nhau bằng dấu ",")</label></td>
             </tr>
         </table>
     </form>

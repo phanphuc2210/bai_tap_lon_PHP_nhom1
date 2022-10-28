@@ -28,9 +28,7 @@ $kq = '';
 
 if(isset($_POST['tinh'])){
 	$str=$_POST['mang'];
-	echo $str;
 	$arr=explode(",",$str);
-	print_r($arr);
     $kq = tongdayso($arr);
 
 	$path = 'dulieu_bai2.txt';

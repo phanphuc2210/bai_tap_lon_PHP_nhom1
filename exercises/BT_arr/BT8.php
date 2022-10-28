@@ -46,11 +46,11 @@ include ('../../includes/header.html');
         else $chuoi ="";
 
         if(isset($_POST['btnSapXep'])){
-            $arr = explode(", ",$chuoi);
+            $arr = explode(",",$chuoi);
             $mang_tang = sap_xep_tang($arr);
-            $in_chuoi_tang = implode(", ",$mang_tang);
+            $in_chuoi_tang = implode(",",$mang_tang);
             $mang_giam = sap_xep_giam($arr);
-            $in_chuoi_giam = implode(", ", $mang_giam);
+            $in_chuoi_giam = implode(",", $mang_giam);
         }
     ?>
     <form action="" method="post">
