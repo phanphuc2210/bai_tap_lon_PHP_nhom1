@@ -2,6 +2,13 @@
 $page_title = 'Hiển thị thông tin sữa dạng list';
 include ('../../includes/header.php');
 ?>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -25,14 +32,14 @@ LIMIT '. $offset . ', ' .$rowsPerPage);
 echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif'
 size='5'> THÔNG TIN CÁC SẢN PHẨM SỮA</font></P>";
 // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
- echo "<table align='center' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+ echo "<table class='mx-auto' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
     if(mysqli_num_rows($result)<>0)
     {
         while($rows=mysqli_fetch_row($result))
         {   
             echo "<tr>";
                 echo "<td width='150px' align='center'> 
-                    <img src='./img/Hinh_sua/{$rows[5]}' width='100px' height='100px' />
+                    <img src='../Hinh_sua//{$rows[5]}' width='100px' height='100px' />
                 </td>";
                 echo "<td>
                     <p>{$rows[0]}</p>

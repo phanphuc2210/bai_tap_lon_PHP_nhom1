@@ -2,6 +2,16 @@
 $page_title = 'Hiển Thị Thông Tin Hãng Sữa';
 include ('../../includes/header.php');
 ?>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    th {
+        text-align: center;
+    }
+</style>
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -18,11 +28,11 @@ $result = mysqli_query($conn, $sql);
 
 
 echo "<p align='center'><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></P>";
-echo "<table align='center' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+echo "<table class='mx-auto' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
 echo '<tr>
     <th width="50">STT</th>
     <th width="150">Tên hãng sữa</th>
-    <th width="250">Địa chỉ</th>
+    <th width="500">Địa chỉ</th>
     <th width="150">Điện thoại</th>
     <th width="150">Email</th>
 </tr>';

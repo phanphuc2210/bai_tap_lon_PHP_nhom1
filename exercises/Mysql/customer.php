@@ -2,6 +2,12 @@
 $page_title = 'Hiển thị, Xóa, Sửa thông tin khách hàng';
 include ('../../includes/header.php');
 ?>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -25,7 +31,7 @@ LIMIT '. $offset . ', ' .$rowsPerPage);
 echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif'
 size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
 // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
- echo "<table align='center' width='1000' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+ echo "<table class='mx-auto' width='1000' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
  echo '<tr>
     <th width="50">Mã KH</th>
      <th width="250">Tên Khách Hàng</th>

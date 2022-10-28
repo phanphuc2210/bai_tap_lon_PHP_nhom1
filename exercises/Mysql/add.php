@@ -57,7 +57,8 @@ if(isset($_POST['add'])){
             $error[] = 'File size should be 2MB';
         }
         if(empty($error)==true){
-            move_uploaded_file($file_tmp,"D:\\PHP\\Mysql\\files\\".$file_name);
+            move_uploaded_file($file_tmp,
+                    ".\\Hinh_sua\\".$file_name);
             echo "Successfully uploaded";
         }
     }
@@ -77,9 +78,9 @@ if(isset($_POST['add'])){
 
 ?>
 <form action="" method="post" enctype="multipart/form-data">
-        <table style="width:500px;" align="center" bgcolor="#20B2AA" cellpadding="2" cellspacing="2">
+        <table style="width:500px;" class="mx-auto" bgcolor="#20B2AA" cellpadding="2" cellspacing="2">
             <tr bgcolor="#008080">
-    	        <th colspan="3" align="center"><h3><i><font color="white">THÊM SỮA MỚI</font></i></h3></th>
+    	        <th colspan="3" align="center"><h3 class="text-center"><i><font color="white">THÊM SỮA MỚI</font></i></h3></th>
             </tr>
             <tr>
                 <td>Mã sữa:</td>
@@ -150,7 +151,7 @@ if(isset($_POST['add'])){
                 <td><input type="file" name='ProductImg' ></td>
             </tr>
             <tr>
-                <td>
+                <td colspan="2" align="center">
                     <input type="submit" name="add" value="Thêm mới"/>
                 </td>
             </tr>

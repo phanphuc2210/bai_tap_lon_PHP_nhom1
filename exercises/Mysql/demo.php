@@ -2,6 +2,12 @@
 $page_title = 'Hiển thị thông tin khách hàng';
 include ('../../includes/header.php');
 ?>
+<style>
+  table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -17,7 +23,7 @@ $sql = "SELECT * FROM Khach_hang";
 $result = mysqli_query($conn, $sql);
 // 4.Xu ly du lieu tra ve
 echo "
-<table border=1>
+<table class='mx-auto'>
     <tr>
         <td>mã Khách Hàng</td>
         <td>tên Khách Hàng</td>
@@ -37,10 +43,9 @@ while ($row = mysqli_fetch_array($result))
         <td>$row[Dia_chi]</td>
         <td>";
           if($row['Phai'] == 1){
-            echo "<img width='50px' src='./img/female.jpg' />";
+            echo "<img width='50px' src='../Hinh_sua/man.jpg' />";
           } else {
-            echo "<img width='50px' src='./img/Male.png' />";
-            
+            echo "<img width='50px' src='../Hinh_sua/nu.jpg' />";
           }  
     echo "</td>
         <td>$row[Dien_thoai]</td>

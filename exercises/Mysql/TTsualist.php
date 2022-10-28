@@ -3,6 +3,12 @@
 $page_title = 'Hiển thị thông tin sữa dạng list';
 include ('../../includes/header.php');
 ?>
+<style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
 <div class="d-flex">
     <?php 
     include ('../../includes/sidebar_exercises.html');
@@ -34,7 +40,7 @@ include ('../../includes/header.php');
 
     // $result = mysqli_query($conn, $sql);
     // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
-    echo "<table align='center' width='700' border='1' cellpadding='2'  cellspacing='2' style='border-collapse:collapse'>";
+    echo "<table class='mx-auto' width='700' border='1' cellpadding='2'  cellspacing='2' style='border-collapse:collapse'>";
     echo '<tr>
           
             <th width="100">Ảnh sản phẩm</th>
@@ -52,7 +58,7 @@ include ('../../includes/header.php');
             $rows[4] = number_format($rows[4],0,',','.')." VNĐ";
             
             echo "<tr bgcolor = '$bg'>";
-            echo "<td align='center'>  <img width='100px' src='./img/Hinh_sua/$rows[5]' /></td>";
+            echo "<td align='center'>  <img width='100px' src='../Hinh_sua//$rows[5]' /></td>";
             echo " <td> <p > <b>$rows[0]</b> </p>
                         <p> Nhà sản xuất: $rows[1]</p>
                         <p>$rows[2] - $rows[3] gram - $rows[4]</p> 

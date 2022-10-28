@@ -49,7 +49,7 @@ if(isset($_POST['add'])) {
                         <b>Có $rows sản phẩm tìm thấy</b>
                     </p>";
             while($row = mysqli_fetch_array($sua)){
-                $hinh_anh = "./img/Hinh_sua/".$row['Hinh'];
+                $hinh_anh = "../Hinh_sua//".$row['Hinh'];
                 $ketqua .= "<table id='tb_ketqua' align='center'>
                             <tr>
                                 <th colspan='2' align='center'>
