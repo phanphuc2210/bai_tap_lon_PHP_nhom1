@@ -40,9 +40,12 @@ session_start();
 		header("Location: /authentication/login.php");
 	}
 	?>
-	<nav class="navbar navbar-expand-lg bg-light py-1">
+	<nav class="navbar navbar-expand-lg bg-light py-0">
 		<div class="container">
-			<a class="navbar-brand" href="/"><h3 class="fw-bold text-origin">Nhóm 1</h3></a>
+			<a href="/"><h4 class="fw-bold text-origin mb-0">Nhóm 1</h4></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav fw-bold">
 					<li class="nav-item">
@@ -55,7 +58,7 @@ session_start();
 						<a class="nav-link <?php echo $path_array[1] == 'exercises'? 'active' : ''; ?>" href="/exercises">Bài tập</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">Web demo</a>
+						<a class="nav-link <?php echo $path_array[1] == 'website'? 'active' : ''; ?>" href="/website">Web demo</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">Trợ giúp</a>
@@ -65,7 +68,7 @@ session_start();
 			<?php 
 			if($isLogin) {
 				echo "<div class='d-flex align-items-center'>
-						<img style='width: 40px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
+						<img style='width: 35px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
 						<span class='ms-1'>Chào, ". $username ."!</span>
 						<a href='/authentication/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
 					</div>";
