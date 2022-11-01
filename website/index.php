@@ -9,7 +9,13 @@ require_once ('../database/connect.php');
     <div class="my-4">
         <div class="d-flex justify-content-between align-items-center">
             <h3>Danh sách sản phẩm</h3>
-            <span>số lượng sản phẩm (20)</span>
+            <?php 
+                $re = mysqli_query($conn, 'select * from san_pham');
+                //tổng số mẩu tin cần hiển thị
+                $numRows = mysqli_num_rows($re);
+                echo "<span>số lượng sản phẩm {$numRows}</span>"
+            ?>
+            
         </div>
 
         <hr class="mt-2">
@@ -54,10 +60,6 @@ require_once ('../database/connect.php');
                             
                         }
                     }
-                    echo"</table>";
-                    $re = mysqli_query($conn, 'select * from san_pham');
-                    //tổng số mẩu tin cần hiển thị
-                    $numRows = mysqli_num_rows($re);
                     //tổng số trang
                     $maxPage = ceil($numRows/$rowsPerPage);
                     // echo 'Tong so trang la: '.$maxPage;
