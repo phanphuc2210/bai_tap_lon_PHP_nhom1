@@ -12,6 +12,10 @@ session_start();
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 	<!-- Style CSS -->
 	<link rel="stylesheet" href="/includes/style.css" type="text/css" media="screen" />
+	<!-- AOS CSS -->
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<!-- AOS JS -->
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
@@ -68,7 +72,7 @@ session_start();
 			<?php 
 			if($isLogin) {
 				echo "<div class='d-flex align-items-center'>
-						<img style='width: 35px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
+						<img style='width: 32px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
 						<span class='ms-1'>Chào, ". $username ."!</span>
 						<a href='/authentication/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
 					</div>";

@@ -155,6 +155,12 @@ input, select, .input {
 	min-height: 100vh;
 }
 
+.anh-cn {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
 /* SideBar phần bài tập */
 .sidebar-bt ul {
 	list-style-type: none;
