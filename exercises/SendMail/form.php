@@ -2,7 +2,7 @@
 $page_title = 'Gửi Mail';
 include ('../../includes/header.php');
 ?>
-<script src="./ckeditor/ckeditor.js"></script>
+<script src="../../assets/ckeditor/ckeditor.js"></script>
 
 <div class="d-flex">
     <?php 
