@@ -8,7 +8,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#"><h3 class="text-origin fw-bold mb-0">MộcPhúc.</h3></a>
+            <a class="navbar-brand" href="/website/"><h3 class="text-origin fw-bold mb-0">MộcPhúc.</h3></a>
             
             <form class="d-flex" role="search">
                 <input class="form-control me-2" style="width: 350px;" type="search" placeholder="Search" aria-label="Search">

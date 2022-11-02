@@ -6,14 +6,14 @@ require_once ('../database/connect.php');
 ?>
 
 <div class="container">
-    <div class="my-4">
+    <div class="mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <h3>Danh sách sản phẩm</h3>
             <?php 
                 $re = mysqli_query($conn, 'select * from san_pham');
                 //tổng số mẩu tin cần hiển thị
                 $numRows = mysqli_num_rows($re);
-                echo "<span>số lượng sản phẩm {$numRows}</span>"
+                echo "<span>số lượng sản phẩm ($numRows)</span>"
             ?>
             
         </div>
@@ -21,11 +21,11 @@ require_once ('../database/connect.php');
         <hr class="mt-2">
 
         <div class="sanpham">
-            <div class="row mt-3 gy-3">
+            <div class="row mt-3 gy-4">
                 <?php 
                 $rowsPerPage = 8;
-                if (!isset($_GET['page']))
-                { $_GET['page'] = 1;
+                if (!isset($_GET['page'])){
+                     $_GET['page'] = 1;
                 }
                 //vị trí của mẩu tin đầu tiên trên mỗi trang
                 $offset =($_GET['page']-1)* $rowsPerPage;
@@ -64,25 +64,23 @@ require_once ('../database/connect.php');
                     $maxPage = ceil($numRows/$rowsPerPage);
                     // echo 'Tong so trang la: '.$maxPage;
                     //gắn thêm nút Back
-                    echo "<div align='center' >";
+                    echo "<div class='my-4 py-1' align='center' >";
                     if ($_GET['page'] > 1){
-                        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".(1)."><<</a> ";
-                        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."> < </a> ";
+                        echo "<a class='mx-1' href=" .$_SERVER['PHP_SELF']."?page=".(1)."><<</a> ";
+                        echo "<a class='mx-1' href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."> < </a> ";
                     }
-                    for ($i=1 ; $i<=$maxPage ; $i++) //tạo link tương ứng tới các trang
-                    { if ($i == $_GET['page'])
-                    echo '<b>Trang '. $i. '</b> '; //trang hiện tại sẽ được bôi đậm
-                    else
-                    echo "<a href=".$_SERVER['PHP_SELF']."?page=".$i.">Trang".$i."</a> ";
+                    for ($i=1 ; $i<=$maxPage ; $i++) {//tạo link tương ứng tới các trang
+                        if ($i == $_GET['page'])
+                            echo '<b class="mx-2 text-origin">Trang '. $i. '</b> '; //trang hiện tại sẽ được bôi đậm
+                        else
+                            echo "<a class='mx-2' href=".$_SERVER['PHP_SELF']."?page=".$i.">Trang ".$i."</a> ";
                     }
                     //gắn thêm nút Next
-                    if ($_GET['page'] < $maxPage)
-                    { 
-                        echo "<a href = ". $_SERVER['PHP_SELF']."?page=".($_GET['page']+1)."> > </a>";
-                        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".$maxPage."> >> </a> ";
+                    if ($_GET['page'] < $maxPage){ 
+                        echo "<a class='mx-1' href = ". $_SERVER['PHP_SELF']."?page=".($_GET['page']+1)."> > </a>";
+                        echo "<a class='mx-1' href=" .$_SERVER['PHP_SELF']."?page=".$maxPage."> >> </a> ";
+                    }
                     echo "</div>";
-                
-                }
                 ?>
                 <!-- Bắt đầu 1 thẻ sản phẩm -->
                 <!-- <div class="col-3 ">
