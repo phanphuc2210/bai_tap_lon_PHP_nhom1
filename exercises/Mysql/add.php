@@ -58,7 +58,7 @@ if(isset($_POST['add'])){
         }
         if(empty($error)==true){
             move_uploaded_file($file_tmp,
-                    ".\\Hinh_sua\\".$file_name);
+                    "..\\Hinh_sua\\".$file_name);
             echo "Successfully uploaded";
         }
     }

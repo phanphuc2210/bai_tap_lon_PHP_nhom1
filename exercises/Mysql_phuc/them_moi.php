@@ -97,7 +97,7 @@ include ('../../includes/header.php');
             // thêm hình vào server
             if($hinh!='') {
                     move_uploaded_file($_FILES["hinh"]["tmp_name"],
-                    ".\\Hinh_sua\\".$hinh);
+                    "..\\Hinh_sua\\".$hinh);
             } else {
                 $ketqua .= "<p style='margin: 2px 0 8px 0; text-align: center;color: red;'>Vui lòng nhập vào hình</p>";
                 return 0;
