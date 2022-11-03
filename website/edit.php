@@ -9,6 +9,7 @@ $sql = "SELECT * FROM loai_sp";
 $ds_loaiSP = mysqli_query($conn, $sql);
 
 $ketqua = '';
+$success = false;
 $masp = isset($_GET['masp'])? $_GET['masp'] : '';
 
 if(isset($_POST['update'])) {
@@ -21,7 +22,7 @@ if(isset($_POST['update'])) {
     $hinh_anh = isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']['name'] != ''? $_FILES['hinh_anh']['name'] : $pre_img;
 
     // thêm hình vào server
-    if($hinh_anh != '') {
+    if($_FILES['hinh_anh']['name'] != '') {
         move_uploaded_file($_FILES["hinh_anh"]["tmp_name"],"..\\Images\\".$hinh_anh);
     } 
 
@@ -29,7 +30,10 @@ if(isset($_POST['update'])) {
             SET Ten_sp = '$ten_sp',
                 Ma_loai_sp = '$ma_loai',
                 So_luong_ton = '$so_luong_ton',
-                Hinh_anh = '$hinh_anh',  
+                "; 
+    if($_FILES['hinh_anh']['name'] != '')
+        $sql .= "Hinh_anh = '$hinh_anh',";
+    $sql .= " 
                 Don_gia = '$don_gia',
                 Mo_ta = '$mo_ta'
             WHERE Ma_sp = '$masp'
@@ -39,8 +43,9 @@ if(isset($_POST['update'])) {
 
     if($result) {
         $ketqua .= "Cập nhật thành công!!!";
+        $success = true;
     } else {
-        $ketqua .= "Kiểm tra lại thông tin!!!";
+        $ketqua .= "Cập nhật thất bại. Vui lòng kiểm tra lại thông tin!!!";
     }
 } else {
     $sql = "SELECT * FROM san_pham WHERE Ma_sp = '$masp'";
@@ -68,7 +73,8 @@ if(isset($_POST['update'])) {
 
     <?php 
     if($ketqua != '') {
-        echo "<div class='w-100 p-3 bg-primary bg-gradient opacity-75 rounded-3 mb-4'>";
+        $bg_color = $success? "bg-success" : "bg-danger";
+        echo "<div class='w-100 p-3 $bg_color bg-gradient opacity-75 rounded-3 mb-4'>";
         echo $ketqua;
         echo "</div>";
     }
