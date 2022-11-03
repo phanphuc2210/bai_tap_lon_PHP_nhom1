@@ -5,25 +5,46 @@ include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
 $masp = isset($_GET['masp'])? $_GET['masp'] : '';
-$sql = "SELECT * 
+$ketqua = '';
+$success = false;
+
+if(isset($_POST['delete'])) {
+    // Kiểm tra sản phẩm đã được mua chưa, chưa thì xóa
+    $sql = "SELECT So_hoa_don FROM cthd WHERE Ma_sp = '$masp'";
+    $hoa_don = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($hoa_don) == 0) {
+        $sql = "DELETE FROM san_pham WHERE Ma_sp = '$masp'";
+        $result = mysqli_query($conn, $sql);
+        if($result) {
+            $ketqua .= "Xóa thành công!!!";
+            $success = true;
+        } else {
+            $ketqua.= "Lỗi khi sản phẩm. Vui lòng kiểm tra lại!!!";
+        }
+    } else {
+        $ketqua .= "Sản phẩm đã được mua nên không thể xóa được!!!";
+    }
+} else {
+    $sql = "SELECT * 
         FROM san_pham 
         join loai_sp on san_pham.Ma_loai_sp = loai_sp.Ma_loai_sp 
         WHERE Ma_sp = '$masp'";
-$result = mysqli_query($conn, $sql);
+    $result = mysqli_query($conn, $sql);
 
-if(mysqli_num_rows($result) > 0) {
-    while($row = mysqli_fetch_array($result)){
-        $ten_sp = $row['Ten_sp'];
-        $ten_loai = $row['Ten_loai_sp'];
-        $so_luong_ton = $row['So_luong_ton'];
-        $hinh_anh = $row['Hinh_anh'];
-        $don_gia = $row['Don_gia'];
-        $mo_ta = $row['Mo_ta'];
+    if(mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_array($result)){
+            $ten_sp = $row['Ten_sp'];
+            $ten_loai = $row['Ten_loai_sp'];
+            $so_luong_ton = $row['So_luong_ton'];
+            $hinh_anh = $row['Hinh_anh'];
+            $don_gia = $row['Don_gia'];
+            $mo_ta = $row['Mo_ta'];
+        }
     }
 }
-
 ?>
 
+<?php if(!isset($_POST['delete'])) { ?>
 <div class="container">
     <form action="" method="POST" class="row mt-4">
         <div class="col-4">
@@ -50,13 +71,21 @@ if(mysqli_num_rows($result) > 0) {
                 <button onclick="history.back()" class="btn btn-dark py-2" style="width: 49%;">
                     Quay lại trang sản phẩm
                 </button>
-                <button class="btn btn-danger py-2" style="width: 49%;">
+                <button class="btn btn-danger py-2" name="delete" style="width: 49%;">
                     Xóa sản phẩm
                 </button>
             </div>
         </div>
     </div>
 </div>
+<?php } else {
+    echo "<div class='container mt-4'>";
+    $bg_color = $success? "bg-success" : "bg-danger";
+    echo "<div class='w-100 p-3 $bg_color bg-gradient rounded-3 mb-4'>";
+    echo $ketqua;
+    echo "</div>";   
+    echo "</div>"; 
+} ?>
 
 <?php
 include ('../includes/footer.html');

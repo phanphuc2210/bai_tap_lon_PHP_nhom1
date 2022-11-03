@@ -107,7 +107,7 @@ if(isset($_POST['update'])) {
 
                 <div class="mb-3">
                     <label class="form-label">Tên sản phẩm:</label>
-                    <input type="text" name="ten_sp" value="<?php echo $ten_sp; ?>" class="form-control">
+                    <input required type="text" name="ten_sp" value="<?php echo $ten_sp; ?>" class="form-control">
                 </div>
 
                 <div class="mb-3">
@@ -126,17 +126,17 @@ if(isset($_POST['update'])) {
 
                 <div class="mb-3">
                     <label class="form-label">Số lượng tồn:</label>
-                    <input type="number" name="so_luong_ton" value="<?php echo $so_luong_ton; ?>" class="form-control">
+                    <input required type="number" name="so_luong_ton" value="<?php echo $so_luong_ton; ?>" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Đơn giá:</label>
-                    <input type="number" name="don_gia" value="<?php echo $don_gia; ?>" class="form-control">
+                    <input required type="number" name="don_gia" value="<?php echo $don_gia; ?>" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label class="form-label">Mô tả:</label>
-                    <textarea class="form-control" name="mo_ta" id="mo_ta" rows="3"><?php echo $mo_ta; ?></textarea>
+                    <textarea required class="form-control" name="mo_ta" id="mo_ta" rows="3"><?php echo $mo_ta; ?></textarea>
                 </div>
 
                 <div class="mb-3">
