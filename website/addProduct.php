@@ -52,7 +52,6 @@ if(isset($_POST['Add'])) {
     $now  = date("Y/m/d");
     $sql = "INSERT INTO san_pham VALUES('$masp_new','$ten_sp','$ma_loai','$so_luong_ton','$hinh_anh','$don_gia','$mo_ta','$now')
     ";
-    echo $now;
     $result = mysqli_query($conn, $sql);
 
     if($result) {
