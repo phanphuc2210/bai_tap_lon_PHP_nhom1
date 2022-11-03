@@ -52,7 +52,7 @@ require_once ('../database/connect.php');
                                         <p class='card-text'>Giá bán: <span class='text-danger'>".number_format($rows[4], 0, '', '.')." vnđ</span></p>
                                         <div class='text-center'>
                                             <a class='btn btn-dark' style='width: 49%;' href='/website/edit.php?masp=". $rows[0] ."'>Sửa <i class='bi bi-pencil-square ms-1'></i></a>
-                                            <a class='btn btn-danger' style='width: 49%;' href='#'>Xóa <i class='bi bi-trash-fill ms-1'></i></a>
+                                            <a class='btn btn-danger' style='width: 49%;' href='/website/delete.php?masp=". $rows[0] ."'>Xóa <i class='bi bi-trash-fill ms-1'></i></a>
                                         </div>
                                     </div>
                                 </div>
