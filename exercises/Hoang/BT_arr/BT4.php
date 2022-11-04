@@ -40,7 +40,7 @@ if(isset($_POST['tinh'])){
 	$arr=explode(",",$str);
     $kq = tongdayso($arr);
 
-	$path = 'dulieu_bai2.txt';
+	$path = 'exercises/Hoang/BT_arr/dulieu_bai2.txt';
 $fp = @fopen($path, 'w+');
 if (!$fp){
     echo 'mo k file thanh cong';

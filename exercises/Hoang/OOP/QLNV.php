@@ -151,7 +151,7 @@ class NVPhucVu extends Nguoi {
                     if(isset($_POST['tinh'])){
                     
                         if(isset($_POST['NV']) && ($_POST['NV'])=="vp"){
-                            $pathVP = 'NVVP.txt';
+                            $pathVP = 'exercises/Hoang/OOP/NVVP.txt';
                             if(isset($_POST['name'])){
                                 $name=$_POST['name'];
                             }
@@ -179,7 +179,7 @@ class NVPhucVu extends Nguoi {
                         }
                     
                         if(isset($_POST['NV']) && ($_POST['NV'])=="pv"){
-                            $pathPV = 'NVPV.txt';
+                            $pathPV = 'exercises/Hoang/OOP/NVPV.txt';
                             if(isset($_POST['name'])){
                                 $name=$_POST['name'];
                             }
