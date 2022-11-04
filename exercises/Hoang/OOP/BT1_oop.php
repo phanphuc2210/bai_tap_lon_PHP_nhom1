@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Tạo các lớp đơn giản';
-include ('../../includes/header.php');
-?>
+
 <style>
     table {
         margin: 0 auto;
@@ -14,10 +11,8 @@ include ('../../includes/header.php');
     }
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Tạo các lớp đơn giản</a></h2>
+
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 1:</u>Tạo các lớp đơn giản</a></h2>
 <?php 
 class Person {
     protected $hoTen;
@@ -258,8 +253,3 @@ if(isset($_POST['tinh'])){
         lh.removeAttribute('disabled');
     })
 </script>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>

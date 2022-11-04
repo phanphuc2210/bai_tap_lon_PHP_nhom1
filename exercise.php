@@ -5,7 +5,7 @@ include ('includes/header.php');
 
 <div class="d-flex">
     <?php 
-    include ('includes/sidebar_exercises.html');
+    include ('includes/sidebar_exercises.php');
     ?>
     <?php if(isset($_GET['name']) && isset($_GET['loai']) && $_GET['ten_bai']) {
         echo "<div class='d-flex w-100'>

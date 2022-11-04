@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Thiết kế Form Tìm kiếm';
-include ('../../includes/header.php');
-?>
+
 <style>
 	table{
 		color: #ffff00;
@@ -15,10 +12,8 @@ include ('../../includes/header.php');
 	}
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 6:</u>Thiết kế Form Tìm kiếm</a></h2>
+
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 6:</u>Thiết kế Form Tìm kiếm</a></h2>
 <?php 
 
 function tim_kiem($arr,$so){
@@ -130,8 +125,3 @@ if(isset($_POST['so']) && isset($_POST['tinh'])){
 </table>
 
 </form>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>

@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Thiết kế Form Phát sinh mảng và tính toán';
-include ('../../includes/header.php');
-?>
+
 <style>
 	table{
 		color: #ffff00;
@@ -15,10 +12,8 @@ include ('../../includes/header.php');
 	}
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 5:</u>Thiết kế Form Phát sinh mảng và tính toán</a></h2>
+
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 5:</u>Thiết kế Form Phát sinh mảng và tính toán</a></h2>
 <?php
 $n = isset($_POST['mang'])? $_POST['mang'] : '';
 function makeArr(){
@@ -140,10 +135,5 @@ if(isset($_POST['tinh'])){
 </table>
 
 </form>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>
 
 

@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Quản Lý Nhân Viên';
-include ('../../includes/header.php');
-?>
+
 <style>
     form {
         display: inline-block;
@@ -32,10 +29,8 @@ include ('../../includes/header.php');
     }
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 4:</u>Quản Lý Nhân Viên</a></h2>
+
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 4:</u>Quản Lý Nhân Viên</a></h2>
 <?php
 abstract class Nguoi {
     protected $Maso;
@@ -240,8 +235,3 @@ class NVPhucVu extends Nguoi {
         cv.removeAttribute('disabled');
     })
 </script>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>

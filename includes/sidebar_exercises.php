@@ -6,7 +6,7 @@
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#form" aria-expanded="false" aria-controls="form">
                 Form (Phúc)
             </a>
-            <ul class="collapse" id="form">
+            <ul class="collapse <?php echo $_GET['name'] == 'Phuc' && $_GET['loai'] == 'Form'? 'show' : ''; ?>" id="form">
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Form&ten_bai=bai1_1.php"><u class="fw-bold text-origin">Bài 1.1:</u> Tạo form nhập liệu với text field (dạng 1)</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Form&ten_bai=bai1_2.php"><u class="fw-bold text-origin">Bài 1.2:</u> Tạo form nhập liệu với text field (dạng 2)</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Form&ten_bai=bai1_3.php"><u class="fw-bold text-origin">Bài 1.3:</u> Tạo form nhập liệu với multipleline text (textarea)</a></li>
@@ -21,40 +21,40 @@
             </ul>
         </li>
         <li class="py-1"> 
-            <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#arr" aria-expanded="false" aria-controls="form">
-                Array & String
+            <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#arr" aria-expanded="false" aria-controls="arr">
+                Array & String (Hoàng)
             </a>
-            <ul class="collapse" id="arr">
-                <li><a class="link-origin" href="exercises/BT_arr/BT1.php"><u class="fw-bold text-origin">Bài 1:</u> Một số thao tác trên mảng số nguyên</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT2.php"><u class="fw-bold text-origin">Bài 2:</u> Thiết kế Form tìm năm nhuận</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT3.php"><u class="fw-bold text-origin">Bài 3:</u> Thiết kế Form tìm năm âm lịch</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT4.php"><u class="fw-bold text-origin">Bài 4:</u> Thiết kế Form nhập và tính trên dãy số</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT5.php"><u class="fw-bold text-origin">Bài 5:</u> Thiết kế Form Phát sinh mảng và tính toán</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT6.php"><u class="fw-bold text-origin">Bài 6:</u> Thiết kế Form Tìm kiếm</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT7.php"><u class="fw-bold text-origin">Bài 7:</u> Thiết kế Form Thay thế</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT8.php"><u class="fw-bold text-origin">Bài 8:</u> Thiết kế Form Sắp xếp mảng</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT9.php"><u class="fw-bold text-origin">Bài 9:</u> Thiết kế Form Đếm phần tử, ghép mảng và sắp xếp</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BT10.php"><u class="fw-bold text-origin">Bài 10:</u> Tạo form xếp hạng bài hát</a></li>
-                <li><a class="link-origin" href="exercises/BT_arr/BTarr.php"><u class="fw-bold text-origin">Bài tập:</u> Tạo và hiển thị ma trận số nguyên</a></li>
+            <ul class="collapse <?php echo $_GET['name'] == 'Hoang' && $_GET['loai'] == 'BT_arr'? 'show' : ''; ?>" id="arr">
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT1.php"><u class="fw-bold text-origin">Bài 1:</u> Một số thao tác trên mảng số nguyên</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT2.php"><u class="fw-bold text-origin">Bài 2:</u> Thiết kế Form tìm năm nhuận</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT3.php"><u class="fw-bold text-origin">Bài 3:</u> Thiết kế Form tìm năm âm lịch</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT4.php"><u class="fw-bold text-origin">Bài 4:</u> Thiết kế Form nhập và tính trên dãy số</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT5.php"><u class="fw-bold text-origin">Bài 5:</u> Thiết kế Form Phát sinh mảng và tính toán</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT6.php"><u class="fw-bold text-origin">Bài 6:</u> Thiết kế Form Tìm kiếm</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT7.php"><u class="fw-bold text-origin">Bài 7:</u> Thiết kế Form Thay thế</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT8.php"><u class="fw-bold text-origin">Bài 8:</u> Thiết kế Form Sắp xếp mảng</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT9.php"><u class="fw-bold text-origin">Bài 9:</u> Thiết kế Form Đếm phần tử, ghép mảng và sắp xếp</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BT10.php"><u class="fw-bold text-origin">Bài 10:</u> Tạo form xếp hạng bài hát</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_arr&ten_bai=BTarr.php"><u class="fw-bold text-origin">Bài tập:</u> Tạo và hiển thị ma trận số nguyên</a></li>
             </ul>
         </li>
         <li class="py-1"> 
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#oop" aria-expanded="false" aria-controls="oop">
-                OOP
+                OOP (Hoàng)
             </a>
-            <ul class="collapse" id="oop">
-                <li><a class="link-origin" href="exercises/OOP/BT1_oop.php"><u class="fw-bold text-origin">Bài 1:</u> Tạo các lớp đơn giản</a></li>
-                <li><a class="link-origin" href="exercises/OOP/BT2_oop.php"><u class="fw-bold text-origin">Bài 2:</u> Quản lý thông tin nhân viên</a></li>
-                <li><a class="link-origin" href="exercises/OOP/BT3_oop.php"><u class="fw-bold text-origin">Bài 3:</u> Phép tính trên phân số</a></li>
-                <li><a class="link-origin" href="exercises/OOP/QLNV.php"><u class="fw-bold text-origin">Bài 4:</u> Quản Lý Nhân Viên</a></li>
-                <li><a class="link-origin" href="exercises/OOP/chuvi_dientich.php"><u class="fw-bold text-origin">Bài 5:</u> Tính chu vi diện tích</a></li>
+            <ul class="collapse <?php echo $_GET['name'] == 'Hoang' && $_GET['loai'] == 'OOP'? 'show' : ''; ?>" id="oop">
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=BT1_oop.php"><u class="fw-bold text-origin">Bài 1:</u> Tạo các lớp đơn giản</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=BT2_oop.php"><u class="fw-bold text-origin">Bài 2:</u> Quản lý thông tin nhân viên</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=BT3_oop.php"><u class="fw-bold text-origin">Bài 3:</u> Phép tính trên phân số</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=QLNV.php"><u class="fw-bold text-origin">Bài 4:</u> Quản Lý Nhân Viên</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=chuvi_dientich.php"><u class="fw-bold text-origin">Bài 5:</u> Tính chu vi diện tích</a></li>
             </ul>
         </li>
         <li class="py-1"> 
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#data" aria-expanded="false" aria-controls="data">
                 Database (Hoàng)
             </a>
-            <ul class="collapse" id="data">
+            <ul class="collapse <?php echo $_GET['name'] == 'Hoang' && $_GET['loai'] == 'Mysql'? 'show' : ''; ?>" id="data">
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=Mysql&ten_bai=demo.php"><u class="fw-bold text-origin">Bài 1:</u>Hiển thị thông tin khách hàng</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=Mysql&ten_bai=TTHang_sua.php"><u class="fw-bold text-origin">Bài 2:</u> Hiển Thị Thông Tin Hãng Sữa</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php"><u class="fw-bold text-origin">Bài 3:</u> Hiển thị thông tin sữa</a></li>
@@ -68,7 +68,7 @@
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#db" aria-expanded="false" aria-controls="db">
                 Database (Phúc)
             </a>
-            <ul class="collapse" id="db">
+            <ul class="collapse <?php echo $_GET['name'] == 'Phuc' && $_GET['loai'] == 'Mysql'? 'show' : ''; ?>" id="db">
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Mysql&ten_bai=luoi_tho_hang_sua.php"><u class="fw-bold text-origin">Bài 1:</u> Hiển thị lưới</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Mysql&ten_bai=luoi_dinh_dang.php"><u class="fw-bold text-origin">Bài 2:</u> Lưới định dạng</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Mysql&ten_bai=luoi_tuy_bien.php"><u class="fw-bold text-origin">Bài 3:</u> Lưới tùy biến</a></li>

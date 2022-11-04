@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Phép tính trên phân số';
-include ('../../includes/header.php');
-?>
+
 <style>
     form {
         display: inline-block;
@@ -24,10 +21,7 @@ include ('../../includes/header.php');
     }
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 3:</u>Phép tính trên phân số</a></h2>
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 3:</u>Phép tính trên phân số</a></h2>
 <?php
 
 function UCLN($a, $b){
@@ -211,8 +205,3 @@ if(isset($_POST['tinh']) && isset($_POST['cal'])){
         sp.removeAttribute('disabled');
     })
 </script>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>

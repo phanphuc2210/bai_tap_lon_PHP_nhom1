@@ -1,7 +1,4 @@
-<?php # Script 3.4 - index.php
-$page_title = 'Quản lý thông tin nhân viên';
-include ('../../includes/header.php');
-?>
+
 <style>
     form {
         display: inline-block;
@@ -32,10 +29,8 @@ include ('../../includes/header.php');
     }
 </style>
 
-<div class="d-flex">
-     
-    <div class="w-80 p-3">
-		<h3 class="mb-4"><u class="fw-bold text-origin">Bài 2:</u>Quản lý thông tin nhân viên</a></h2>
+
+<h3 class="mb-4"><u class="fw-bold text-origin">Bài 2:</u>Quản lý thông tin nhân viên</a></h2>
 <?php
 
 abstract class NhanVien {
@@ -290,8 +285,3 @@ if(isset($_POST['tinh'])){
         sp.removeAttribute('disabled');
     })
 </script>
-</div>
-</div>
-<?php
-include ('../../includes/footer.html');
-?>
