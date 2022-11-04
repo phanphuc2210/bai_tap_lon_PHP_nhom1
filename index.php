@@ -13,7 +13,7 @@ include ('includes/header.php');
 
     <div class="row">
         <div class="col-4" data-aos="fade-right" style="width: 500px; height: 500px;">
-            <img src="/Images/phanphuc.jpg" class="anh-cn" alt="phanphuc">
+            <img src="./Images/phanphuc.jpg" class="anh-cn" alt="phanphuc">
         </div>
         <div class="col-7" data-aos="fade-left">
             <p class="fs-5 mb-1">MSSV: 61136382</p>
@@ -25,7 +25,7 @@ include ('includes/header.php');
     
     <div class="row mt-5">
         <div class="col-4 order-2" data-aos="fade-up-right" style="width: 500px; height: 500px;">
-            <img src="/Images/phanphuc.jpg" class="anh-cn" alt="phanphuc">
+            <img src="./Images/phanphuc.jpg" class="anh-cn" alt="phanphuc">
         </div>
         <div class="col-7 order-1" data-aos="fade-up-left">
             <p class="fs-5 mb-1">MSSV: 61131788</p>
