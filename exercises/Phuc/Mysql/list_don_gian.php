@@ -29,14 +29,14 @@ $sql = "SELECT sua.Ten_sua, sua.Hinh, hang_sua.Ten_hang_sua, loai_sua.Ten_loai,s
 $result = mysqli_query($conn, $sql);
 ?>
 
-<table class="mx-auto">
+<table align="center">
     <tr>
         <td colspan="2" align="center" id="title"><h2>THÔNG TIN CÁC SẢN PHẨM</h2></td>
     </tr>
     <?php 
     if(mysqli_num_rows($result)!=0) {
         while($row = mysqli_fetch_array($result)){
-            $hinh_anh = "exercises/Hinh_sua/".$row['Hinh'];
+            $hinh_anh = "../../Hinh_sua/".$row['Hinh'];
             echo "<tr style='height: 150px'>";
             echo "<td align='center' style='width: 200px'><img src= $hinh_anh width='100px'/></td>";
             echo "<td style='width: 350px'>

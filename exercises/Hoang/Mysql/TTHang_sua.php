@@ -21,7 +21,7 @@ $result = mysqli_query($conn, $sql);
 
 
 echo "<p align='center'><font size='5' color='blue'> THÔNG TIN HÃNG SỮA</font></P>";
-echo "<table class='mx-auto' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+echo "<table align='center' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
 echo '<tr>
     <th width="50">STT</th>
     <th width="150">Tên hãng sữa</th>

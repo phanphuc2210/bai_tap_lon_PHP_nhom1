@@ -44,7 +44,7 @@
         }
         ?>
 
-        <table class="mx-auto" border="1"> 
+        <table align="center" border="1"> 
             <tr>
                 <th colspan="2" align="center">
                     <h2>
@@ -54,7 +54,7 @@
             </tr>
             <tr>
             <?php 
-            $hinh_anh = "exercises/Hinh_sua/".$data['Hinh'];
+            $hinh_anh = "../../Hinh_sua/".$data['Hinh'];
             echo "<td align='center' style='width: 230px'><img src= $hinh_anh width='150px'/></td>";
             echo "<td style='width: 450px' >
                 <p class='fw-bold'><i>Thành phần dinh dưỡng:</i></p>

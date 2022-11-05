@@ -73,7 +73,7 @@ $maxPage = ceil($numRows/$rowsPerPage);
 ?>
 
 <h2>THÔNG TIN SỮA</h2>
-<table class="mx-auto">
+<table align="center">
     <tr>
         <th>STT</th>
         <th>Tên sữa</th>
@@ -104,20 +104,20 @@ $maxPage = ceil($numRows/$rowsPerPage);
     <?php 
     //gắn thêm nút Back
     if($_GET['page'] > 1) {
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=luoi_phan_trang.php&page=1><<</a> ";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=luoi_phan_trang.php&page=".($_GET['page']-1)."><</a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=1><<</a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."><</a> ";
     }
     //tạo link tương ứng tới các trang
     for ($i=1 ; $i<=$maxPage ; $i++) { 
         if ($i == $_GET['page']) { 
             echo '<b style="color: #c62d0f">'.$i.'</b> '; //trang hiện tại sẽ được bôi đậm
         } else
-            echo "<a href=" .$_SERVER['PHP_SELF']. "?name=Phuc&loai=Mysql&ten_bai=luoi_phan_trang.php&page=".$i.">".$i."</a>";
+            echo "<a href=" .$_SERVER['PHP_SELF']. "?page=".$i.">".$i."</a>";
     }
     //gắn thêm nút Next
     if($_GET['page'] < $maxPage) {
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=luoi_phan_trang.php&page=".($_GET['page']+1).">></a> ";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=luoi_phan_trang.php&page=".$maxPage.">>></a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']+1).">></a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".$maxPage.">>></a> ";
     }
     ?>
 </div>

@@ -32,7 +32,7 @@ if(isset($_POST['btnXacNhan']))
         $al = $mang_can[$can] ." ". $mang_chi[$chi];
         $dl = $dl +3;
         $hinh = $mang_hinh[$chi];
-        $hinh_anh = "<img src='exercises/Hoang/BT_arr/images/$hinh'>";
+        $hinh_anh = "<img src='images/$hinh'>";
     }
     else {
         echo "<font color='red'>Vui lòng nhập vào số! </font>";

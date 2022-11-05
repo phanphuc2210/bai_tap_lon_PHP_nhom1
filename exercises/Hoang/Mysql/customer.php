@@ -24,7 +24,7 @@ LIMIT '. $offset . ', ' .$rowsPerPage);
 echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif'
 size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
 // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
- echo "<table class='mx-auto' width='1000' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+ echo "<table align='center' width='1000' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
  echo '<tr>
     <th width="50">Mã KH</th>
      <th width="250">Tên Khách Hàng</th>
@@ -50,8 +50,8 @@ size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
                 echo "<td>{$rows[3]}</td>";
                 echo "<td>{$rows[4]}</td>";
                 echo "<td>{$rows[5]}</td>";
-                echo '<td> <a href="./exercise.php?name=Hoang&loai=Mysql&ten_bai=deleteCustomer.php&page='.$rows[0].'" ><i class="fa-solid fa-trash"></i></a> </td>';
-                echo '<td> <a href="./exercise.php?name=Hoang&loai=Mysql&ten_bai=editCustomer.php&page='.$rows[0].'" ><i class="fa-solid fa-pen-to-square"></i></a></td>';
+                echo '<td> <a href="deleteCustomer.php?page='.$rows[0].'" ><i class="fa-solid fa-trash"></i></a> </td>';
+                echo '<td> <a href="editCustomer.php?page='.$rows[0].'" ><i class="fa-solid fa-pen-to-square"></i></a></td>';
                 echo "</tr>";
         }
     }
@@ -65,20 +65,20 @@ size='5'> THÔNG TIN KHÁCH HÀNG</font></P>";
     //gắn thêm nút Back
     echo "<div align='center' >";
     if ($_GET['page'] > 1){
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=customer.php&page=".(1)."><<</a> ";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=customer.php&page=".($_GET['page']-1)."> < </a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".(1)."><<</a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."> < </a> ";
     }
     for ($i=1 ; $i<=$maxPage ; $i++) //tạo link tương ứng tới các trang
     { if ($i == $_GET['page'])
     echo '<b>Trang '. $i. '</b> '; //trang hiện tại sẽ được bôi đậm
     else
-    echo "<a href=".$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=customer.php&page=".$i.">Trang".$i."</a> ";
+    echo "<a href=".$_SERVER['PHP_SELF']."?page=".$i.">Trang".$i."</a> ";
     }
     //gắn thêm nút Next
     if ($_GET['page'] < $maxPage)
     { 
-        echo "<a href = ". $_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=customer.php&page=".($_GET['page']+1)."> > </a>";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=customer.php&page=".$maxPage."> >> </a> ";
+        echo "<a href = ". $_SERVER['PHP_SELF']."?page=".($_GET['page']+1)."> > </a>";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".$maxPage."> >> </a> ";
     echo "</div>";
 
 }

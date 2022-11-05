@@ -85,8 +85,8 @@
         <?php 
             if(mysqli_num_rows($result)!=0) {
                 while($row = mysqli_fetch_array($result)){
-                    $hinh_anh = "exercises/Hinh_sua/".$row['Hinh'];
-                    echo "<table class='mx-auto'> ";
+                    $hinh_anh = "../../Hinh_sua/".$row['Hinh'];
+                    echo "<table align='center'> ";
                     echo "<tr>";
                     echo "<th colspan='2' align='center'>";
                     echo "<h2>" . $row['Ten_sua']. " - " . $row['Ten_hang_sua'] . "</h2>";    
@@ -113,20 +113,20 @@
             <?php 
             //gắn thêm nút Back
             if($_GET['page'] > 1) {
-                echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=list_phan_trang.php&page=1><<</a> ";
-                echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=list_phan_trang.php&page=".($_GET['page']-1)."><</a> ";
+                echo "<a href=" .$_SERVER['PHP_SELF']."?page=1><<</a> ";
+                echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."><</a> ";
             }
             //tạo link tương ứng tới các trang
             for ($i=1 ; $i<=$maxPage ; $i++) { 
                 if ($i == $_GET['page']) { 
                     echo '<b style="color: #c62d0f">'.$i.'</b> '; //trang hiện tại sẽ được bôi đậm
                 } else
-                    echo "<a href=" .$_SERVER['PHP_SELF']. "?name=Phuc&loai=Mysql&ten_bai=list_phan_trang.php&page=".$i.">".$i."</a>";
+                    echo "<a href=" .$_SERVER['PHP_SELF']. "?page=".$i.">".$i."</a>";
             }
             //gắn thêm nút Next
             if($_GET['page'] < $maxPage) {
-                echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=list_phan_trang.php&page=".($_GET['page']+1).">></a> ";
-                echo "<a href=" .$_SERVER['PHP_SELF']."?name=Phuc&loai=Mysql&ten_bai=list_phan_trang.php&page=".$maxPage.">>></a> ";
+                echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']+1).">></a> ";
+                echo "<a href=" .$_SERVER['PHP_SELF']."?page=".$maxPage.">>></a> ";
             }
             ?>
         </div>

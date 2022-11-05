@@ -89,7 +89,7 @@ if(isset($_POST['them'])) {
     // thêm hình vào server
     if($hinh!='') {
             move_uploaded_file($_FILES["hinh"]["tmp_name"],
-            "exercises\\Hinh_sua\\".$hinh);
+            "..\\..\\Hinh_sua\\".$hinh);
     } else {
         $ketqua .= "<p style='margin: 2px 0 8px 0; text-align: center;color: red;'>Vui lòng nhập vào hình</p>";
         return 0;
@@ -112,7 +112,7 @@ if(isset($_POST['them'])) {
                         <b>Thêm sữa thành công</b>
                     </p>";
             while($row = mysqli_fetch_array($sua)){
-                $hinh_anh =  "exercises/Hinh_sua/".$row['Hinh'];
+                $hinh_anh =  "../../Hinh_sua/".$row['Hinh'];
                 $ketqua .= "<table id='tb_ketqua' align='center'>
                             <tr>
                                 <th colspan='2' align='center'>

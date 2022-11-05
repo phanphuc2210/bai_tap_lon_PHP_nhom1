@@ -69,8 +69,8 @@ if(isset($_GET['search'])) {
                         <b>Có ". mysqli_num_rows($result) ." sản phẩm được tìm thấy</b>
                     </p>";
         while($row = mysqli_fetch_array($result)){
-            $hinh_anh =  "exercises/Hinh_sua/".$row['Hinh'];
-            $ketqua .= "<table class='mx-auto'>
+            $hinh_anh =  "../../Hinh_sua/".$row['Hinh'];
+            $ketqua .= "<table>
                         <tr>
                             <th colspan='2' align='center'>
                                 <h2>" . $row['Ten_sua']. " - " . $row['Ten_hang_sua'] . "</h2>   

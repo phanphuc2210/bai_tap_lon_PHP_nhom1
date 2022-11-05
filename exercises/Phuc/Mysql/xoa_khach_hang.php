@@ -22,11 +22,19 @@
 require_once "connect.php";
 $ketqua = "";
 $makh = isset($_GET['makh'])? $_GET['makh'] : '';
-$ten_kh = isset($_POST['ten_kh'])? $_POST['ten_kh'] : '';
-$phai = isset($_POST['phai'])? $_POST['phai'] : '';
-$dia_chi = isset($_POST['dia_chi'])? $_POST['dia_chi'] : '';
-$dien_thoai = isset($_POST['dien_thoai'])? $_POST['dien_thoai'] : '';
-$email = isset($_POST['email'])? $_POST['email'] : '';
+
+$sql = "SELECT * FROM khach_hang WHERE Ma_khach_hang = '$makh'";
+$result = mysqli_query($conn, $sql);
+
+if(mysqli_num_rows($result) > 0) {
+    while($row = mysqli_fetch_array($result)){
+        $ten_kh = $row['Ten_khach_hang'];
+        $phai = $row['Phai'];
+        $dia_chi = $row['Dia_chi'];
+        $dien_thoai = $row['Dien_thoai'];
+        $email = $row['Email'];
+    }
+}
 
 if(isset($_POST['delete'])) {
     // Kiểm tra khách hàng mua hàng chưa, chưa thì xóa
@@ -44,19 +52,6 @@ if(isset($_POST['delete'])) {
         $ketqua .= "Khách hàng đã mua hàng nên không thể xóa được!!!";
     }
 
-} else {
-    $sql = "SELECT * FROM khach_hang WHERE Ma_khach_hang = '$makh'";
-    $result = mysqli_query($conn, $sql);
-    
-    if(mysqli_num_rows($result) > 0) {
-        while($row = mysqli_fetch_array($result)){
-            $ten_kh = $row['Ten_khach_hang'];
-            $phai = $row['Phai'];
-            $dia_chi = $row['Dia_chi'];
-            $dien_thoai = $row['Dien_thoai'];
-            $email = $row['Email'];
-        }
-    }
 }
 
 ?>
@@ -102,5 +97,5 @@ if(isset($_POST['delete'])) {
     </table>
 </form>
 <p style="margin-top: 12px;text-align: center;"><b><?php echo $ketqua; ?></b></p>
-<a href="./exercise.php?name=Phuc&loai=Mysql&ten_bai=thong_tin_khach_hang.php">Quay về</a>
+<a href="thong_tin_khach_hang.php">Quay về</a>
   

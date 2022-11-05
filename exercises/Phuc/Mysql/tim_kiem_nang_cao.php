@@ -84,7 +84,7 @@ if(isset($_GET['search'])) {
                         <b>Có ". mysqli_num_rows($result) ." sản phẩm được tìm thấy</b>
                     </p>";
         while($row = mysqli_fetch_array($result)){
-            $hinh_anh =  "exercises/Hinh_sua/".$row['Hinh'];
+            $hinh_anh =  "../../Hinh_sua/".$row['Hinh'];
             $ketqua .= "<table align='center'>
                         <tr>
                             <th colspan='2' align='center'>
@@ -118,11 +118,6 @@ if(isset($_GET['search'])) {
 <div class="wrap">
     <h1>TÌM KIẾM THÔNG TIN SỮA</h1>
     <form action="" method="GET">
-        <!-- Xử lý đường dẫn vào bài tập (với phương thức là GET)-->
-        <input type="text" name="name" value="Phuc" hidden>
-        <input type="text" name="loai" value="Mysql" hidden>
-        <input type="text" name="ten_bai" value="tim_kiem_nang_cao.php" hidden>
-        <!-- end -->
         <p class="section_search">
             <b style="color: red;">Loại sữa: </b>
             <select name="ma_loai_sua">

@@ -102,4 +102,4 @@ if(isset($_POST['update'])) {
     </table>
 </form>
 <p style="margin-top: 12px;text-align: center;"><b><?php echo $ketqua; ?></b></p>
-<a href="./exercise.php?name=Phuc&loai=Mysql&ten_bai=thong_tin_khach_hang.php">Quay về</a>
+<a href="thong_tin_khach_hang.php">Quay về</a>

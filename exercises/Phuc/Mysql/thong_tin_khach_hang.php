@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 <h1>THÔNG TIN KHÁCH HÀNG</h1>
-<table class="mx-auto">
+<table align="center">
     <tr>
         <th>Mã KH</th>
         <th>Tên khách hàng</th>
@@ -42,8 +42,8 @@ $result = mysqli_query($conn, $sql);
         <th>Địa chỉ</th>
         <th>Số điện thoại</th>
         <th>Email</th>
-        <th><img src="../Hinh_sua/edit.jpg" width="20px" alt="edit"/></th>
-        <th><img src="../Hinh_sua/delete.png" width="20px" alt="delete"/></th>
+        <th><img src="../../Hinh_sua/edit.jpg" width="20px" alt="edit"/></th>
+        <th><img src="../../Hinh_sua/delete.png" width="20px" alt="delete"/></th>
     </tr>
     <?php 
     if(mysqli_num_rows($result)!=0) {
@@ -64,10 +64,10 @@ $result = mysqli_query($conn, $sql);
             echo "<td>". $row['Dien_thoai'] ."</td>";
             echo "<td>". $row['Email'] ."</td>";
             echo "<td>
-                    <a href='./exercise.php?name=Phuc&loai=Mysql&ten_bai=cap_nhat_khach_hang.php&makh=". $row['Ma_khach_hang'] ."'>Sửa</a>
+                    <a href='cap_nhat_khach_hang.php?makh=". $row['Ma_khach_hang'] ."'>Sửa</a>
                 </td>";
             echo "<td>
-                    <a href='./exercise.php?name=Phuc&loai=Mysql&ten_bai=xoa_khach_hang.php&makh=". $row['Ma_khach_hang'] ."'>Xóa</a>
+                    <a href='xoa_khach_hang.php?makh=". $row['Ma_khach_hang'] ."'>Xóa</a>
                 </td>";
             echo "</tr>";
         }

@@ -26,7 +26,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 <h2>THÔNG TIN HÃNG SỮA</h2>
-<table border="1" class="mx-auto">
+<table border="1" align="center">
     <tr>
         <th>Mã HS</th>
         <th>Tên hãng sữa</th>

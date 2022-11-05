@@ -33,7 +33,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 <h2>THÔNG TIN KHÁCH HÀNG</h2>
-<table class="mx-auto">
+<table align="center">
     <tr>
         <th>Mã KH</th>
         <th>Tên khách hàng</th>
@@ -49,11 +49,11 @@ $result = mysqli_query($conn, $sql);
             echo "<td>". $row['Ten_khach_hang'] ."</td>";
             if($row['Phai'] == 0) {
                 echo "<td align='center'>
-                        <img width='40px' src='../Hinh_sua/man.jpg' alt='nam'/>
+                        <img width='40px' src='../../Hinh_sua/man.jpg' alt='nam'/>
                     </td>";
             }else {
                 echo "<td align='center'> 
-                        <img width='40px' src='../Hinh_sua/nu.jpg' alt='nữ'/>
+                        <img width='40px' src='../../Hinh_sua/nu.jpg' alt='nữ'/>
                     </td>";
             } 
             echo "<td>". $row['Dia_chi'] ."</td>";

@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 $str ='';
         if (isset($_POST['rank']) && isset($_POST['namesong']) && isset($_POST['add'])){
             $_SESSION["arr"][$_POST['rank']] = $_POST['namesong'];

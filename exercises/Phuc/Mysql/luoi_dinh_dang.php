@@ -34,7 +34,7 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 <h2>THÔNG TIN KHÁCH HÀNG</h2>
-<table class="mx-auto">
+<table align="center">
     <tr>
         <th>Mã KH</th>
         <th>Tên khách hàng</th>

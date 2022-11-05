@@ -18,5 +18,5 @@ if (count($_POST['monhoc']) > 0) {
 }
 echo "<br>";
 echo "Ghi chú: ".$_POST['ghichu']."<br><br>";
-echo "<a class='text-primary' style='cursor: pointer;' onclick='history.back()'>Trở về trang trước</a>";
+echo "<a href='' onclick='history.back()'>Trở về trang trước</a>";
 ?>

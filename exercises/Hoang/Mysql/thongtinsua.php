@@ -28,7 +28,7 @@ LIMIT '. $offset . ', ' .$rowsPerPage);
 echo "<p align='center'><font face= 'Verdana, Geneva, sans-serif'
 size='5'> THÔNG TIN SỮA</font></P>";
 // echo "<p align='center'><font size='5' color='blue'> THÔNG TIN SỮA</font></P>";
- echo "<table class='mx-auto' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
+ echo "<table align='center' width='700' border='1' cellpadding='2' cellspacing='2' style='border-collapse:collapse'>";
  echo '<tr>
     <th width="50">STT</th>
      <th width="200">Tên sữa</th>
@@ -91,20 +91,20 @@ size='5'> THÔNG TIN SỮA</font></P>";
     //gắn thêm nút Back
     echo "<div align='center' >";
     if ($_GET['page'] > 1){
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php&page=".(1)."><<</a> ";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php&page=".($_GET['page']-1)."> < </a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".(1)."><<</a> ";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".($_GET['page']-1)."> < </a> ";
     }
     for ($i=1 ; $i<=$maxPage ; $i++) //tạo link tương ứng tới các trang
     { if ($i == $_GET['page'])
     echo '<b>Trang '. $i. '</b> '; //trang hiện tại sẽ được bôi đậm
     else
-    echo "<a href=".$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php&page=".$i.">Trang".$i."</a> ";
+    echo "<a href=".$_SERVER['PHP_SELF']."?page=".$i.">Trang".$i."</a> ";
     }
     //gắn thêm nút Next
     if ($_GET['page'] < $maxPage)
     { 
-        echo "<a href = ". $_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php&page=".($_GET['page']+1)."> > </a>";
-        echo "<a href=" .$_SERVER['PHP_SELF']."?name=Hoang&loai=Mysql&ten_bai=thongtinsua.php&page=".$maxPage."> >> </a> ";
+        echo "<a href = ". $_SERVER['PHP_SELF']."?page=".($_GET['page']+1)."> > </a>";
+        echo "<a href=" .$_SERVER['PHP_SELF']."?page=".$maxPage."> >> </a> ";
     echo "</div>";
 
 }

@@ -1,7 +1,10 @@
 
 <style>
+    fieldset {
+        display: inline-block;
+    }
     table {
-        margin: 0 auto;
+        /* margin: 0 auto; */
         background: #ffd94d;
         border: 0 solid yellow;
     }
@@ -138,7 +141,7 @@ if(isset($_POST['tinh'])){
 
 <form action="" method="post">
 <fieldset>
-	<legend class="text-center fw-bold">Quản lý Thông Tin GV-SV</legend>
+	<legend>Quản lý Thông Tin GV-SV</legend>
 	<table border='0'>
         <tr><td>Nhập tên:</td><td><input type="text"  name="name" value="<?php if(isset($_POST['name'])) echo $_POST['name'];?>"/></td></tr>
         <tr><td>Địa chỉ:</td><td><input type="text"  name="dc" value="<?php if(isset($_POST['dc'])) echo $_POST['dc'];?>"/></td></tr>

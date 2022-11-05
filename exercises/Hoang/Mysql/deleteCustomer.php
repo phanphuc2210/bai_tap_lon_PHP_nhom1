@@ -57,9 +57,8 @@ size='5'>XÓA THÔNG TIN KHÁCH HÀNG</font></P>";
         if(!$result){
             echo "Error SQL";
         } else {
-            echo "Xóa thành công"."<br>";
-            echo "<a href='./exercise.php?name=Hoang&loai=Mysql&ten_bai=customer.php'>Quay lại</a>";
-            // header("Location: ./exercise.php?name=Hoang&loai=Mysql&ten_bai=customer.php");
+           
+            header("Location: ./customer.php");
         }
     }
 ?>

@@ -3,11 +3,6 @@
     form {
         display: inline-block;
         padding: 4px;
-        background-color: #d24dff;
-    }
-
-    legend {
-        text-align: center;
     }
 
     table {

@@ -28,7 +28,7 @@
 
 <h3 class="mb-4"><u class="fw-bold text-origin">Bài 2.3:</u> Tạo trang web thực hiện phép tính trên 2 số</a></h2>
     <!-- ================== Phần thay đổi nằm ở đây =========================== -->
-    <form align='center' action="./exercise.php?name=Phuc&loai=Form&ten_bai=ketquapheptinh.php" method="post" id="pheptinh">
+    <form align='center' action="ketquapheptinh.php" method="post" id="pheptinh">
         <table>
             <thead>
                 <th colspan="2" style="padding: 4px;">

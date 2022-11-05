@@ -32,7 +32,7 @@
 
 <h3 class="mb-4"><u class="fw-bold text-origin">Bài 2.4:</u> Tạo trang web nhận và xử lý thông tin người dùng</a></h2>
 <!-- ================== Phần thay đổi nằm ở đây =========================== -->
-<form align='center' action="./exercise.php?name=Phuc&loai=Form&ten_bai=xulyThongtin.php" method="post">
+<form align='center' action="xulyThongtin.php" method="post">
     <table>
         <thead>
             <th colspan="2" style="padding: 4px;">

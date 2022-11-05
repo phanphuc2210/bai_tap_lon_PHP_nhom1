@@ -36,9 +36,9 @@ while ($row = mysqli_fetch_array($result))
         <td>$row[Dia_chi]</td>
         <td>";
           if($row['Phai'] == 1){
-            echo "<img width='50px' src='exercises/Hinh_sua/man.jpg' />";
+            echo "<img width='50px' src='../../Hinh_sua/man.jpg' />";
           } else {
-            echo "<img width='50px' src='exercises/Hinh_sua/nu.jpg' />";
+            echo "<img width='50px' src='../../Hinh_sua/nu.jpg' />";
           }  
     echo "</td>
         <td>$row[Dien_thoai]</td>

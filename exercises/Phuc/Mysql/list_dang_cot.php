@@ -39,7 +39,7 @@ $sql = "SELECT sua.Ten_sua, sua.Hinh, hang_sua.Ten_hang_sua, loai_sua.Ten_loai,s
 $result = mysqli_query($conn, $sql);
 ?>
 
-<table class="mx-auto">
+<table align="center">
     <tr>
         <td colspan="5" align="center" id="title"><h2>THÔNG TIN CÁC SẢN PHẨM</h2></td>
     </tr>
@@ -47,7 +47,7 @@ $result = mysqli_query($conn, $sql);
     if(mysqli_num_rows($result)!=0) {
         $n = 0;
         while($row = mysqli_fetch_array($result)){
-            $hinh_anh = "exercises/Hinh_sua/".$row['Hinh'];
+            $hinh_anh = "../../Hinh_sua/".$row['Hinh'];
             echo "
                 <td align='center' style='width: 180px'>
                     <p class='fw-bold mb-0'>".$row['Ten_sua']."</p>

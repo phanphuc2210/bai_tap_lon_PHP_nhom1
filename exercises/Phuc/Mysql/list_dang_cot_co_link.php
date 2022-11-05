@@ -45,7 +45,7 @@ if($numRows!=0) {
 }
 ?>  
 
-<table class="mx-auto">
+<table align="center">
     <tr>
         <td colspan="<?php echo $itemPerRow; ?>" align="center" id="title"><h2>THÔNG TIN CÁC SẢN PHẨM</h2></td>
     </tr>
@@ -56,8 +56,8 @@ if($numRows!=0) {
             echo "<tr style='height: 150px'>";
             for($j = ($i - 1)* $itemPerRow; $j < $itemPerRow*$i; $j++) {
                 if($j < $numRows) {
-                    $hinh_anh = "exercises/Hinh_sua/".$mang[$j]['Hinh'];
-                    $linkToDetail = "./exercise.php?name=Phuc&loai=Mysql&ten_bai=list_chi_tiet.php&ma=".$mang[$j]['Ma_sua']; 
+                    $hinh_anh = "../../Hinh_sua/".$mang[$j]['Hinh'];
+                    $linkToDetail = "list_chi_tiet.php?ma=".$mang[$j]['Ma_sua']; 
                     echo "<td align='center' style='width: 180px'>
                             <a href= $linkToDetail>
                                 <p class='fw-bold mb-0'>".$mang[$j]['Ten_sua']."</p>
