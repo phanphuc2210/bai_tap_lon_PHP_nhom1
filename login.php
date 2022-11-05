@@ -1,10 +1,10 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Login';
-include ('../includes/header.php');
+include ('includes/header.php');
 ?>
 
 <?php 
-require_once '../database/connect.php';
+require_once 'database/connect.php';
 $errors = [];
 $tenDN = isset($_POST['tenDN'])? $_POST['tenDN'] : '';
 $pass = isset($_POST['pass'])? $_POST['pass'] : '';
@@ -28,7 +28,7 @@ if(isset($_POST['login'])) {
         if(mysqli_num_rows($result) > 0) {
             $_SESSION['isLogin'] = true;
             $_SESSION['Username'] = mysqli_fetch_array($result)['Ten_nhan_vien'];
-            header("Location: /");
+            header("Location: ./");
         } else {
             $errors[] = "Tên đăng nhập hoặc mật khẩu không chính xác.";
         }
@@ -84,5 +84,5 @@ if(isset($_POST['login'])) {
     })
 </script>
 <?php
-include ('../includes/footer.html');
+include ('includes/footer.html');
 ?>

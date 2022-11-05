@@ -1,6 +1,5 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Welcome to MộcPhúc.!';
-include ('../includes/header.php');
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 ?>

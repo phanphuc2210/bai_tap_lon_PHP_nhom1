@@ -48,20 +48,20 @@ session_start();
 	?>
 	<nav class="navbar navbar-expand-lg bg-light py-0">
 		<div class="container">
-			<a href="./index.php"><h4 class="fw-bold text-origin mb-0">Nhóm 1</h4></a>
+			<a href="./"><h4 class="fw-bold text-origin mb-0">Nhóm 1</h4></a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav fw-bold">
 					<li class="nav-item">
-						<a class="nav-link" aria-current="page" href="./index.php">Trang chủ</a>
+						<a class="nav-link" aria-current="page" href="./">Trang chủ</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="./exercise.php">Bài tập</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="./website">Web demo</a>
+						<a class="nav-link" href="./website/">Web demo</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">Trợ giúp</a>
@@ -71,12 +71,12 @@ session_start();
 			<?php 
 			if($isLogin) {
 				echo "<div class='d-flex align-items-center'>
-						<img style='width: 32px;' class='rounded-circle' src='/Images/avatar.jpg' alt='avatar'>
+						<img style='width: 32px;' class='rounded-circle' src='./Images/avatar.jpg' alt='avatar'>
 						<span class='ms-1'>Chào, ". $username ."!</span>
-						<a href='/authentication/logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
+						<a href='./logout.php' class='btn btn-outline-dark btn-sm ms-2'>Đăng xuất</a>
 					</div>";
 			} else {
-				echo "<a href='/authentication/login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
+				echo "<a href='./login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
 			}
 			?>
 		</div>

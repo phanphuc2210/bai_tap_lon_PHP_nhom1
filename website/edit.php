@@ -1,6 +1,5 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Edit sản phẩm!';
-include ('../includes/header.php');
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
