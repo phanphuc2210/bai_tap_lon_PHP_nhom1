@@ -39,6 +39,24 @@
             </ul>
         </li>
         <li class="py-1"> 
+            <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#arr_phuc" aria-expanded="false" aria-controls="arr_phuc">
+                Array & String (Phúc)
+            </a>
+            <ul class="collapse <?php echo $_GET['name'] == 'Phuc' && $_GET['loai'] == 'Array'? 'show' : ''; ?>" id="arr_phuc">
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai1.php"><u class="fw-bold text-origin">Bài 1:</u> Một số thao tác trên mảng số nguyên</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=mangNamNhuan.php"><u class="fw-bold text-origin">Bài 2:</u> Thiết kế Form tìm năm nhuận</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=namAmLich.php"><u class="fw-bold text-origin">Bài 3:</u> Thiết kế Form tìm năm âm lịch</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai4.php"><u class="fw-bold text-origin">Bài 4:</u> Thiết kế Form nhập và tính trên dãy số</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai5.php"><u class="fw-bold text-origin">Bài 5:</u> Thiết kế Form Phát sinh mảng và tính toán</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai6.php"><u class="fw-bold text-origin">Bài 6:</u> Thiết kế Form Tìm kiếm</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai7.php"><u class="fw-bold text-origin">Bài 7:</u> Thiết kế Form Thay thế</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai8.php"><u class="fw-bold text-origin">Bài 8:</u> Thiết kế Form Sắp xếp mảng</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai9.php"><u class="fw-bold text-origin">Bài 9:</u> Thiết kế Form Đếm phần tử, ghép mảng và sắp xếp</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=bai10_session.php"><u class="fw-bold text-origin">Bài 10:</u> Tạo form xếp hạng bài hát</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=Array&ten_bai=mang2Chieu.php"><u class="fw-bold text-origin">Bài tập:</u> Tạo và hiển thị ma trận số nguyên</a></li>
+            </ul>
+        </li>
+        <li class="py-1"> 
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#oop" aria-expanded="false" aria-controls="oop">
                 OOP (Hoàng)
             </a>
@@ -47,7 +65,17 @@
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=BT2_oop.php"><u class="fw-bold text-origin">Bài 2:</u> Quản lý thông tin nhân viên</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=BT3_oop.php"><u class="fw-bold text-origin">Bài 3:</u> Phép tính trên phân số</a></li>
                 <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=QLNV.php"><u class="fw-bold text-origin">Bài 4:</u> Quản Lý Nhân Viên</a></li>
-                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=OOP&ten_bai=chuvi_dientich.php"><u class="fw-bold text-origin">Bài 5:</u> Tính chu vi diện tích</a></li>
+            </ul>
+        </li>
+        <li class="py-1"> 
+            <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#oop_phuc" aria-expanded="false" aria-controls="oop_phuc">
+                OOP (Phúc)
+            </a>
+            <ul class="collapse <?php echo $_GET['name'] == 'Phuc' && $_GET['loai'] == 'OOP'? 'show' : ''; ?>" id="oop_phuc">
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=OOP&ten_bai=lopcoban.php"><u class="fw-bold text-origin">Bài 1:</u> Tạo các lớp đơn giản</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=OOP&ten_bai=quanlynhanvien.php"><u class="fw-bold text-origin">Bài 2:</u> Quản lý thông tin nhân viên</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=OOP&ten_bai=phanso.php"><u class="fw-bold text-origin">Bài 3:</u> Phép tính trên phân số</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Phuc&loai=OOP&ten_bai=chuvi_dientich.php"><u class="fw-bold text-origin">Bài 4:</u> Tính chu vi diện tích</a></li>
             </ul>
         </li>
         <li class="py-1"> 
