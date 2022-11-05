@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style CSS -->
+	<link rel="stylesheet" href="../includes/style.css" type="text/css" media="screen" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="/website/"><h3 class="text-origin fw-bold mb-0">MộcPhúc.</h3></a>
+            <a class="navbar-brand" href="./"><h3 class="text-origin fw-bold mb-0">MộcPhúc.</h3></a>
             
             <form class="d-flex" role="search">
                 <input class="form-control me-2" style="width: 350px;" type="search" placeholder="Search" aria-label="Search">

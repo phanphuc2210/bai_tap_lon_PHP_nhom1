@@ -50,7 +50,7 @@ if(isset($_POST['delete'])) {
         <div class="col-4">
             <div class="card w-100 product-item">
                 <a href="#">
-                    <img src="/Images/<?php echo $hinh_anh;?>" class="card-img-top" alt="sản phẩm">
+                    <img src="../Images/<?php echo $hinh_anh;?>" class="card-img-top" alt="sản phẩm">
                 </a>
                 <div class="card-body">
                     <a href="#" class="text-decoration-none text-dark">
@@ -87,7 +87,7 @@ if(isset($_POST['delete'])) {
             <?php echo $ketqua . "<a href='' onclick='history.go(-2)'> Quay lại trang danh sách.</a>"; ?>
         </div>
         <div class="mt-5 text-center">
-            <img width="400px" src="/Images/<?php echo $img_thongBao;?>" alt="hình ảnh thông báo thành công, thất bại">
+            <img width="400px" src="../Images/<?php echo $img_thongBao;?>" alt="hình ảnh thông báo thành công, thất bại">
         </div>
     </div>
 <?php } ?>

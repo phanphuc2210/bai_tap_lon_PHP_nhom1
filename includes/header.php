@@ -58,13 +58,10 @@ session_start();
 						<a class="nav-link" aria-current="page" href="./index.php">Trang chủ</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Thông tin</a>
-					</li>
-					<li class="nav-item">
 						<a class="nav-link" href="./exercise.php">Bài tập</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="/website">Web demo</a>
+						<a class="nav-link" href="./website">Web demo</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link">Trợ giúp</a>
