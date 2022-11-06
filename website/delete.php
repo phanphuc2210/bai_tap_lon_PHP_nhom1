@@ -68,7 +68,7 @@ if(isset($_POST['delete'])) {
             </div>
             <div class="w-100">
                 <button onclick="history.back()" class="btn btn-dark py-2" style="width: 49%;">
-                    Quay lại trang sản phẩm
+                    Quay lại trang trước
                 </button>
                 <button class="btn btn-danger py-2" name="delete" style="width: 49%;">
                     Xóa sản phẩm
