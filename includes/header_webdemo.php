@@ -17,7 +17,7 @@
             
             <div>
                 <a class="btn btn-outline-success me-1" href="#">Thêm</a>
-                <a class="btn btn-outline-primary" href="#">Tìm kiếm</a>
+                <a class="btn btn-outline-primary" href="../website/search.php">Tìm kiếm</a>
             </div>
         </div>
     </nav>
