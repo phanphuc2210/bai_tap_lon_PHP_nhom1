@@ -1,6 +1,5 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Xóa sản phẩm!';
-include ('../includes/header.php');
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
@@ -50,7 +49,7 @@ if(isset($_POST['delete'])) {
         <div class="col-4">
             <div class="card w-100 product-item">
                 <a href="#">
-                    <img src="/Images/<?php echo $hinh_anh;?>" class="card-img-top" alt="sản phẩm">
+                    <img src="../Images/<?php echo $hinh_anh;?>" class="card-img-top" alt="sản phẩm">
                 </a>
                 <div class="card-body">
                     <a href="#" class="text-decoration-none text-dark">
@@ -69,7 +68,7 @@ if(isset($_POST['delete'])) {
             </div>
             <div class="w-100">
                 <button onclick="history.back()" class="btn btn-dark py-2" style="width: 49%;">
-                    Quay lại trang sản phẩm
+                    Quay lại trang trước
                 </button>
                 <button class="btn btn-danger py-2" name="delete" style="width: 49%;">
                     Xóa sản phẩm
@@ -78,15 +77,19 @@ if(isset($_POST['delete'])) {
         </div>
     </div>
 </div>
-<?php } else {
-    echo "<div class='container mt-4'>";
+<?php } else { 
     $bg_color = $success? "bg-success" : "bg-danger";
-    echo "<div class='w-100 p-3 $bg_color bg-gradient rounded-3 mb-4'>";
-    echo $ketqua;
-    echo "</div>";   
-    echo "</div>"; 
-} ?>
-
+    $img_thongBao = $success? "success.gif" : "error.jpg";
+?>
+    <div class="container mt-4">
+        <div class='w-100 p-3 <?php echo $bg_color; ?> bg-gradient rounded-3 mb-4'>
+            <?php echo $ketqua . "<a href='' onclick='history.go(-2)'> Quay lại trang danh sách.</a>"; ?>
+        </div>
+        <div class="mt-5 text-center">
+            <img width="400px" src="../Images/<?php echo $img_thongBao;?>" alt="hình ảnh thông báo thành công, thất bại">
+        </div>
+    </div>
+<?php } ?>
 <?php
 include ('../includes/footer.html');
 ?>
