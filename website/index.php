@@ -39,7 +39,7 @@ require_once ('../database/connect.php');
                         {   
                         echo "<div class='col-3 '>
                                 <div class='card w-100 product-item' style='width: 18rem;'>
-                                    <a href='./details?masp={$row[0]}'>
+                                    <a href='./details.php?masp={$rows[0]}'>
                                         <img src='../Images/{$rows[3]}' class='card-img-top' style='height: 250px' alt='sản phẩm'>
                                     </a>
                                 <div class='card-body'>
