@@ -21,6 +21,24 @@
             </ul>
         </li>
         <li class="py-1"> 
+            <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#form_H" aria-expanded="false" aria-controls="form">
+                Form (Hoàng)
+            </a>
+            <ul class="collapse <?php echo $_GET['name'] == 'Phuc' && $_GET['loai'] == 'Form'? 'show' : ''; ?>" id="form_H">
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=input_xuly.php"><u class="fw-bold text-origin">Bài 1.1:</u> Tạo form nhập liệu với text field (dạng 1)</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=names.php"><u class="fw-bold text-origin">Bài 1.2:</u> Tạo form nhập liệu với text field (dạng 2)</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=textarea.php"><u class="fw-bold text-origin">Bài 1.3:</u> Tạo form nhập liệu với multipleline text (textarea)</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=checkbox.php"><u class="fw-bold text-origin">Bài 1.4:</u> Tạo form nhập liệu với hộp kiểm checkbox</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=radio.php"><u class="fw-bold text-origin">Bài 1.5:</u> Tạo form nhập liệu với hộp kiểm radio button</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=combobox.php"><u class="fw-bold text-origin">Bài 1.6:</u> Tạo form nhập liệu với danh sách dạng combo box</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=listbox.php"><u class="fw-bold text-origin">Bài 1.7:</u> Tạo form nhập liệu với danh sách dạng list box</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=Rectangle.php"><u class="fw-bold text-origin">Bài 2.1:</u> Thiết kế form tính diện tích hình chữ nhật</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=electric.php"><u class="fw-bold text-origin">Bài 2.2:</u> Thiết kế form tính tiền điện</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=pheptinh.php"><u class="fw-bold text-origin">Bài 2.3:</u> Tạo trang web thực hiện phép tính trên 2 số</a></li>
+                <li><a class="link-origin" href="./exercise.php?name=Hoang&loai=BT_form&ten_bai=thongtin.php"><u class="fw-bold text-origin">Bài 2.4:</u> Tạo trang web nhận và xử lý thông tin người dùng</a></li>
+            </ul>
+        </li>
+        <li class="py-1"> 
             <a class="fs-6 fw-bold text-white" data-bs-toggle="collapse" href="#arr" aria-expanded="false" aria-controls="arr">
                 Array & String (Hoàng)
             </a>
@@ -115,6 +133,11 @@
         <li class="py-1"> 
             <a class="fs-6 fw-bold text-white" href="./exercise.php?name=Phuc&loai=SendMail&ten_bai=form.php">
                 Send mail (Phúc)
+            </a>
+        </li>
+        <li class="py-1"> 
+            <a class="fs-6 fw-bold text-white" href="./exercise.php?name=Hoang&loai=SendMail&ten_bai=form.php">
+                Send mail (Hoàng)
             </a>
         </li>
     </ul>
