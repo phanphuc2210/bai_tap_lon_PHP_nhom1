@@ -1,6 +1,5 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Edit sản phẩm!';
-include ('../includes/header.php');
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
@@ -77,7 +76,7 @@ if(isset($_POST['update'])) {
 
 
 ?>
-<script src="../../assets/ckeditor/ckeditor.js"></script>
+<script src="../assets/ckeditor/ckeditor.js"></script>
 
 <div class="container mb-4">
     <h3 class="mt-4">Cập nhật thông tin sản phẩm</h3>
@@ -95,7 +94,7 @@ if(isset($_POST['update'])) {
     <form action="" method="post" enctype="multipart/form-data">
         <div class="row mt-2">
             <div class="col-5">
-                <img src="/Images/<?php echo $hinh_anh; ?>" class="w-100 mb-2" alt="<?php echo $ten_sp; ?>">
+                <img src="../Images/<?php echo $hinh_anh; ?>" class="w-100 mb-2" alt="<?php echo $ten_sp; ?>">
                 <input type="file" name="hinh_anh">
                 <input type="text" name="pre_img" value="<?php echo $hinh_anh; ?>" hidden>
             </div>
@@ -145,7 +144,7 @@ if(isset($_POST['update'])) {
             </div>
         </div>
     </form>
-    <a href="/website/" class="my-3 pointer" class="text-decoration-none"> < Quay lại</a>
+    <a href="./" class="my-3 pointer" class="text-decoration-none"> < Quay lại</a>
 </div>
 
 <script>
