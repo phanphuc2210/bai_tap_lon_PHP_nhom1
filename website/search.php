@@ -81,15 +81,36 @@ $ketqua = '';
                         san_pham.Ten_sp LIKE '%$ten_sp%'
                     ";
             } else {
-                $from = $_GET['from'];
                 $to = $_GET['to'];
-                $sql = "SELECT san_pham.Ten_sp,san_pham.Hinh_anh, san_pham.Ma_loai_sp, san_pham.Don_gia, loai_sp.Ten_loai_sp,san_pham.Ma_sp,san_pham.So_luong_ton, san_pham.Mo_ta
-                FROM san_pham JOIN loai_sp ON san_pham.Ma_loai_sp = loai_sp.Ma_loai_sp
-                WHERE 
-                    san_pham.Ma_loai_sp LIKE '%$ma_loai_sp%' AND
-                    san_pham.Ten_sp LIKE '%$ten_sp%' AND
-                    (san_pham.Don_gia BETWEEN $from AND $to)
-                ";
+                $from = $_GET['from'];
+                if(empty($_GET['to'])){ 
+                    $sql = "SELECT san_pham.Ten_sp,san_pham.Hinh_anh, san_pham.Ma_loai_sp, san_pham.Don_gia, loai_sp.Ten_loai_sp,san_pham.Ma_sp,san_pham.So_luong_ton, san_pham.Mo_ta
+                    FROM san_pham JOIN loai_sp ON san_pham.Ma_loai_sp = loai_sp.Ma_loai_sp
+                    WHERE 
+                        san_pham.Ma_loai_sp LIKE '%$ma_loai_sp%' AND
+                        san_pham.Ten_sp LIKE '%$ten_sp%' AND
+                        (san_pham.Don_gia >= $from )
+                    ";
+                } else {
+                    if(empty($_GET['from'])){ 
+                        $sql = "SELECT san_pham.Ten_sp,san_pham.Hinh_anh, san_pham.Ma_loai_sp, san_pham.Don_gia, loai_sp.Ten_loai_sp,san_pham.Ma_sp,san_pham.So_luong_ton, san_pham.Mo_ta
+                        FROM san_pham JOIN loai_sp ON san_pham.Ma_loai_sp = loai_sp.Ma_loai_sp
+                        WHERE 
+                            san_pham.Ma_loai_sp LIKE '%$ma_loai_sp%' AND
+                            san_pham.Ten_sp LIKE '%$ten_sp%' AND
+                            (san_pham.Don_gia <= $to )
+                        ";
+                    } else {
+                        $sql = "SELECT san_pham.Ten_sp,san_pham.Hinh_anh, san_pham.Ma_loai_sp, san_pham.Don_gia, loai_sp.Ten_loai_sp,san_pham.Ma_sp,san_pham.So_luong_ton, san_pham.Mo_ta
+                        FROM san_pham JOIN loai_sp ON san_pham.Ma_loai_sp = loai_sp.Ma_loai_sp
+                        WHERE 
+                            san_pham.Ma_loai_sp LIKE '%$ma_loai_sp%' AND
+                            san_pham.Ten_sp LIKE '%$ten_sp%' AND
+                            (san_pham.Don_gia BETWEEN $from AND $to)
+                        ";
+                    }
+                }
+                
             }
             $result = mysqli_query($conn, $sql);
             
