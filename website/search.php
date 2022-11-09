@@ -2,66 +2,22 @@
 $page_title = 'Tìm kiếm sản phẩm!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
-
-$ketqua = '';
 ?>
 <style>
-    .wrap {
-        margin: 4px auto;
-        width: 700px;
-        background-color: #fdfef0;
-    }
-
-    h1, h2, p {
-        margin: 0;
-    }
-
-    h1 {
-        color: #f43d56;
-        background-color: #fecccd;
-        text-align: center;
-    }
-
-    form {
-        margin-top: 2px;
-        text-align: center;
-        
-    }
-
-    .section_search {
-        margin-top: 2px;
-        background-color: #fecccd;
-    }
-
-    table {
-        margin: 0 auto;
-    }
-
-    h2 {
-        color: #f5590b;
-        text-align: center;
-    }
-
-    table, th, td {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    th {
-        background-color: #ffeee6;
-    }
+    p {
+        margin-bottom: 0;
+    } 
 
     td {
-        padding: 4px 8px;
-    }
-
-    .origin {
-        color: #f44363;
+        padding-bottom: 8px;
     }
 </style>
-<div class="d-flex">
-    <div class="w-80 p-3">
-        <!-- ================== Phần thay đổi nằm ở đây =========================== -->
+<div class="container mb-4">
+    <a href="./">Quay lại</a>
+    <h3>Tìm kiếm sản phẩm</h3>
+    <hr class="mt-2">
+
+    
         <?php
         $ketqua = "";
         $ma_loai_sp = isset($_GET['ma_san_pham'])? $_GET['ma_san_pham'] : "";
@@ -97,28 +53,26 @@ $ketqua = '';
                 $ketqua .= "<p style='margin: 2px 0 8px 0; text-align: center;'>
                                 <b>Có ". mysqli_num_rows($result) ." sản phẩm được tìm thấy</b>
                             </p>";
-                while($row = mysqli_fetch_array($result)){
-                    $hinh_anh = "../Images/".$row['Hinh_anh'];
-                    $ketqua .= "<table align='center'>
-                                <tr>
-                                    <th colspan='2' align='center'>
-                                        <h2>" . $row['Ten_sp']. " - " . $row['Ten_loai_sp'] . "</h2>   
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <td align='center' style='width: 200px'><img src= $hinh_anh width='150px'/></td>
-                                    <td style='width: 450px' >
-                                        <p class='fw-bold'><i>Mã sản phẩm:</i></p>
-                                        <span>". $row['Ma_sp'] ."</span>
-                                        <p class='fw-bold'><i>Mô tả:</i></p>
-                                        <span>". $row['Mo_ta'] ."</span>
-                                        <p>
-                                            <b><i>Số lượng tồn: </i></b> <span class='origin'>". $row['So_luong_ton'] ." </span> - 
-                                            <b><i>Đơn giá: </i></b> <span class='origin'>". number_format($row['Don_gia'], 0, '', '.') ." VNĐ</span>
-                                        </p>
-                                    </td>
-                                </tr>
-                                </table>";
+                while($rows = mysqli_fetch_array($result)){
+                    $ketqua .= "<div class='col-3 '>
+                                    <div class='card w-100 product-item' style='width: 18rem;'>
+                                        <a href='#'>
+                                            <img src='../Images/{$rows['Hinh_anh']}' class='card-img-top' style='height: 250px' alt='sản phẩm'>
+                                        </a>
+                                    <div class='card-body'>
+                                            <a href='#' class='text-decoration-none text-dark'>
+                                                <h5 class='card-title'>{$rows['Ten_sp']}</h5>
+                                            </a>
+                                            <p class='mb-1'>Mã sản phẩm: {$rows['Ma_sp']}</p>
+                                            <p class='mb-1'><span class='me-4'>Loại sản phẩm: {$rows['Ten_loai_sp']}</span> <span>Còn lại: {$rows['So_luong_ton']}</spanc></p>
+                                            <p class='card-text'>Giá bán: <span class='text-danger'>".number_format($rows['Don_gia'], 0, '', '.')." vnđ</span></p>
+                                            <div class='text-center'>
+                                                <a class='btn btn-dark' style='width: 49%;' href='./edit.php?masp=". $rows['Ma_sp'] ."'>Sửa <i class='bi bi-pencil-square ms-1'></i></a>
+                                                <a class='btn btn-danger' style='width: 49%;' href='./delete.php?masp=". $rows['Ma_sp'] ."'>Xóa <i class='bi bi-trash-fill ms-1'></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>";
                 }
             } else {
                 $ketqua .= "<p style='margin: 2px 0 8px 0; text-align: center;'>
@@ -129,40 +83,51 @@ $ketqua = '';
 
         ?>
 
-        <div class="wrap">
-            <h1>TÌM KIẾM THÔNG TIN SẢN PHẨM</h1>
+        <div class="w-50 mx-auto">
             <form action="" method="GET">
-                <p class="section_search">
-                    <b style="color: red;">Loại sản phẩm: </b>
-                    <select name="ma_san_pham">
-                        <option value="">= Tất cả =</option>
-                        <?php 
-                        if(mysqli_num_rows($loai_sp) > 0) {
-                            while($row = mysqli_fetch_array($loai_sp)){
-                                $selected = isset($_GET['ma_san_pham']) && $_GET['ma_san_pham'] == $row['Ma_loai_sp'] ? "selected" : "";
-                                echo "<option value='". $row['Ma_loai_sp'] ."' $selected>".$row['Ten_loai_sp']."</option>";
-                            }
-                        }
-                        ?>
-                    </select>
-                </p>
-                <p class="section_search">
-                    <b style="color: red;">Tên sản phẩm: </b>
-                    <input class="w-30" type="text" name="ten_sp" value="<?php echo isset($_GET['ten_sp'])? $_GET['ten_sp'] : ''; ?>">
-                    
-                </p>
-                <p class="section_search">
-                    <b style="color: red;">Giá từ: </b>
-                    <input class="w-30" type="text" name="from" value="<?php echo isset($_GET['from'])? $_GET['from'] : ''; ?>">
-                    <b style="color: red;">đến: </b>
-                    <input class="w-30" type="text" name="to" value="<?php echo isset($_GET['to'])? $_GET['to'] : ''; ?>">
-                </p>
-                <input type="submit" name="search" value="Tìm kiếm" width="100px">
+                
+                <table class="w-100 mx-auto">
+                    <tr>
+                        <td>
+                            <b>Tên sản phẩm: </b>
+                            <input class="w-50" type="text" name="ten_sp" value="<?php echo isset($_GET['ten_sp'])? $_GET['ten_sp'] : ''; ?>">
+                        </td>
+                        <td>
+                            <b>Loại sản phẩm: </b>
+                            <select name="ma_san_pham" class="w-50">
+                                <option value="">= Tất cả =</option>
+                                <?php 
+                                if(mysqli_num_rows($loai_sp) > 0) {
+                                    while($row = mysqli_fetch_array($loai_sp)){
+                                        $selected = isset($_GET['ma_san_pham']) && $_GET['ma_san_pham'] == $row['Ma_loai_sp'] ? "selected" : "";
+                                        echo "<option value='". $row['Ma_loai_sp'] ."' $selected>".$row['Ten_loai_sp']."</option>";
+                                    }
+                                }
+                                ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <b>Giá từ: </b>
+                            <input class="w-30" type="text" name="from" value="<?php echo isset($_GET['from'])? $_GET['from'] : ''; ?>">
+                        
+                            <b>đến: </b>
+                            <input class="w-30" type="text" name="to" value="<?php echo isset($_GET['to'])? $_GET['to'] : ''; ?>">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" name="search" class="btn btn-dark" style="width: 100px;" value="Tìm kiếm"/>
+                            <input type="reset" class="btn btn-outline-dark" style="width: 100px;" value="Reset"/>
+                        </td>
+                    </tr>
+                </table>
             </form>
-            <div id="ketqua">
-                <?php echo $ketqua; ?>
-            </div>
+            <hr class="w-50 mx-auto">
         </div>
+    <div class="row mt-3 gy-4">
+        <?php echo $ketqua; ?>
     </div>
 </div>
 
