@@ -1,6 +1,5 @@
 <?php # Script 3.4 - index.php
 $page_title = 'Welcome to MộcPhúc.!';
-include ('../includes/header.php');
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
@@ -69,6 +68,7 @@ if(isset($_POST['Add'])) {
         <div class="d-flex justify-content-between align-items-center">
             <h3>Thêm sản phẩm mới</h3>
         </div>
+        <hr class="mt-2">
         <form action="" method="post" enctype="multipart/form-data">
         <div class="row mt-2">
             <div class="col-12">
