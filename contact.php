@@ -31,7 +31,7 @@ if(isset($_POST['send']) && isset($_POST['email']) && isset($_POST['comment'])){
 	$mPass = "ayzcffojvyzwdpce"; //mật khẩu email của người gửi
 
 
-	$mTo = $email; //địa chỉ email của người nhận
+	$mTo = "phuc.pth.61cntt@ntu.edu.vn"; //địa chỉ email của người nhận
 	$nTo = ''; //tên người nhận
 
 	$body = $comment;
@@ -39,7 +39,7 @@ if(isset($_POST['send']) && isset($_POST['email']) && isset($_POST['comment'])){
 	$mail->Username   = $mFrom; //khai báo địa chỉ email
 	$mail->Password   = $mPass;  //khai báo mật khẩu
 	$mail->SetFrom($mFrom, $nFrom); //thông tin người gửi
-	$mail->AddReplyTo("info@gmail.com","Email Reply");// khi người dùng phản hồi sẽ gửi đến email này
+	$mail->AddReplyTo($email,"Email Reply");// khi người dùng phản hồi sẽ gửi đến email này
 	$mail->AddAddress($mTo,$nTo);//Email của người nhận
 	$mail->Subject    = $title; 
 	$mail->MsgHTML($body); //Nội dung chính của email được đặt ở đây
