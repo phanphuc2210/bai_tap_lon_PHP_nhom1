@@ -78,7 +78,7 @@ session_start();
 					</div>";
 			} else {
 				echo "<a href='./login.php' class='btn btn-dark btn-sm'>Đăng nhập</a>";
-				echo "<a href='./signin.php' class='btn btn-dark btn-sm ms-2'>Đăng ký</a>";
+				echo "<a href='./register.php' class='btn btn-dark btn-sm ms-2'>Đăng ký</a>";
 			}
 			?>
 		</div>
