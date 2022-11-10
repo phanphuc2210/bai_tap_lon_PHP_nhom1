@@ -49,7 +49,7 @@ session_start();
 						<a class="nav-link" href="../website/">Web demo</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link">Trợ giúp</a>
+						<a class="nav-link" href="../contact.php">Liên hệ</a>
 					</li>
 				</ul>
 			</div>
