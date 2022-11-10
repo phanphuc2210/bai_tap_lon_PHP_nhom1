@@ -20,6 +20,7 @@ session_start();
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- AOS JS -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://kit.fontawesome.com/8973f61f8c.js" crossorigin="anonymous"></script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
