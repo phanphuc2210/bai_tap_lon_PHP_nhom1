@@ -16,7 +16,7 @@ $sdt = isset($_POST['sdt'])? $_POST['sdt'] : '';
 $pass = isset($_POST['pass'])? $_POST['pass'] : '';
 $re_pass = isset($_POST['re_pass'])? $_POST['re_pass'] : '';
 $phai=0;
-if(isset($_POST['login'])) {
+if(isset($_POST['register'])) {
     if($tenDN == '') {
         $errors[] = "Tên đăng nhập không được trống.";
     }
@@ -52,8 +52,16 @@ if(isset($_POST['login'])) {
     } else {
         $phai = 1;
     }
+
     if($pass != $re_pass ){
         $error[] = 'Mặt khẩu không khớp!';
+        $sql = "SELECT *
+                FROM nhan_vien 
+                WHERE Tai_khoan = '$tenDN'
+            ";
+        $result = mysqli_query($conn, $sql); 
+    } else if(mysqli_num_rows($result) > 0){
+        $errors[] = "Tên đăng nhập đã tồn tại.";
     } else {
         $sql = "INSERT INTO nhan_vien VALUES('$manv_new','$tenNV','$ns','$phai','$dc','$sdt','$mail','$tenDN','$pass')
         ";
@@ -131,7 +139,7 @@ if(isset($_POST['login'])) {
             </div>
         </div>
 
-        <button class="btn btn-dark mx-auto mt-3" name="login" type="submit"><span class="text-origin fw-bold">ĐĂNG KÝ</span></button>
+        <button class="btn btn-dark mx-auto mt-3" name="register" type="submit"><span class="text-origin fw-bold">ĐĂNG KÝ</span></button>
     </form>
 </div>
 
