@@ -2,6 +2,11 @@
 $page_title = 'Tìm kiếm sản phẩm!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
+
+// Phải đăng nhập thì mới có thể truy cập
+if($isLogin == false) {
+    header("Location: ../login.php");
+}
 ?>
 <style>
     p {

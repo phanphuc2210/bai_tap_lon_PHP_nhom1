@@ -24,12 +24,9 @@ session_start();
 </head>
 <body>
 	<?php 
-	// Phải đăng nhập thì mới có thể truy cập
 	$isLogin = isset($_SESSION['isLogin'])? $_SESSION['isLogin'] : false;
 	$username = isset($_SESSION['Username'])? $_SESSION['Username'] : '';
-	// if($path_array[1] == 'exercises' && $isLogin == false) {
-	// 	header("Location: /authentication/login.php");
-	// }
+	
 	?>
 	<nav class="navbar navbar-expand-lg bg-light py-0">
 		<div class="container">

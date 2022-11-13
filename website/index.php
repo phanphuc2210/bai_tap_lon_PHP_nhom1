@@ -4,6 +4,13 @@ include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 ?>
 
+<?php 
+	// Phải đăng nhập thì mới có thể truy cập
+	if($isLogin == false) {
+		header("Location: ../login.php");
+	}
+?>
+
 <div class="container">
     <div class="mt-4">
         <div class="d-flex justify-content-between align-items-center">

@@ -3,6 +3,11 @@ $page_title = 'Welcome to MộcPhúc.!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
+// Phải đăng nhập thì mới có thể truy cập
+if($isLogin == false) {
+    header("Location: ../login.php");
+}
+
 $tensp = isset($_GET['tensp'])? trim($_GET['tensp']) : '';
 ?>
 

@@ -3,6 +3,11 @@ $page_title = 'Welcome to MộcPhúc.!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
+// Phải đăng nhập thì mới có thể truy cập
+if($isLogin == false) {
+    header("Location: ../login.php");
+}
+
 $sql = "SELECT * FROM loai_sp";
 $ds_loaiSP = mysqli_query($conn, $sql);  
 $ketqua = '';
@@ -122,7 +127,7 @@ if(isset($_POST['Add'])) {
             </div>
         </div>
     </form>
-    <a href="/website" class="my-3" class="text-decoration-none"> < Quay lại</a>
+    <a href="./" class="my-3" class="text-decoration-none"> < Quay lại</a>
         <hr class="mt-2">
 
         <div class="sanpham">

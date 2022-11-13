@@ -3,6 +3,11 @@ $page_title = 'Detail sản phẩm!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
+// Phải đăng nhập thì mới có thể truy cập
+if($isLogin == false) {
+    header("Location: ../login.php");
+}
+
 // Lấy danh sách loại sản phẩm từ CSDL để load lên giao diện
 $sql = "SELECT * FROM loai_sp";
 $ds_loaiSP = mysqli_query($conn, $sql);
