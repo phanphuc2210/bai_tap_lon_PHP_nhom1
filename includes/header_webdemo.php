@@ -82,8 +82,8 @@ session_start();
                 </form>
                 
                 <div>
-                    <a class="btn btn-outline-success me-1" href="./addProduct.php">Thêm</a>
-                    <a class="btn btn-outline-primary" href="./search.php">Tìm kiếm</a>
+                    <a class="btn btn-outline-success me-1" href="../website/addProduct.php">Thêm</a>
+                    <a class="btn btn-outline-primary" href="../website/search.php">Tìm kiếm</a>
                 </div>
             </div>
         </nav>

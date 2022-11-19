@@ -5,24 +5,25 @@ require_once ('../database/connect.php');
 
 $sql = "SELECT * FROM loai_sp";
 $ds_loaiSP = mysqli_query($conn, $sql);  
-$ketqua = '';
+
 $masp = isset($_GET['masp'])? $_GET['masp'] : '';
 ?>
 
 <?php
+$ketqua = '';
+$error_upload = false;
+$success = false;
+$ten_sp ='';
 if(isset($_POST['Add'])) {
     $ten_sp = isset($_POST['ten_sp'])? $_POST['ten_sp'] : '';
     $ma_loai = isset($_POST['ma_loai'])? $_POST['ma_loai'] : '';
-    $so_luong_ton = isset($_POST['so_luong_ton'])? $_POST['so_luong_ton'] : '';
-    $don_gia = isset($_POST['don_gia'])? $_POST['don_gia'] : '';
+    $so_luong_ton = isset($_POST['so_luong_ton']) ? $_POST['so_luong_ton'] : 0;
+    $don_gia = isset($_POST['don_gia'])? $_POST['don_gia'] : 0;
     $mo_ta = isset($_POST['mo_ta'])? $_POST['mo_ta'] : '';
     $pre_img = isset($_POST['pre_img'])? $_POST['pre_img'] : '';
     $hinh_anh = isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']['name'] != ''? $_FILES['hinh_anh']['name'] : $pre_img;
 
-    // thêm hình vào server
-    if($hinh_anh != '') {
-        move_uploaded_file($_FILES["hinh_anh"]["tmp_name"],"..\\Images\\".$hinh_anh);
-    } 
+    
 
     $sql="SELECT max(MA_sp) FROM san_pham";
    
@@ -47,17 +48,63 @@ if(isset($_POST['Add'])) {
         $masp_new =substr($masp_max, 0,4) . $stt;
     }
 
+    //Kiểm tra Sản phẩm
+    $sql = "SELECT Ten_sp FROM san_pham";
+    $result = mysqli_query($conn, $sql); 
     
-    $now  = date("Y/m/d");
-    $sql = "INSERT INTO san_pham VALUES('$masp_new','$ten_sp','$ma_loai','$so_luong_ton','$hinh_anh','$don_gia','$mo_ta','$now')
-    ";
-    $result = mysqli_query($conn, $sql);
+    if(mysqli_num_rows($result)<>0)
+    { 
+        
+        while($rows=mysqli_fetch_row($result))
+        {  
+            if($rows[0] == $ten_sp){
+                $success = false;
+                $ketqua .=  "<p class='mb-0'>Đã tồn tại sản phẩm này</p>";
+            }
+            else { $success = true; }
+        }
+    }
+    // Kiểm tra số lượng tồn
+    if($so_luong_ton < 0){
+        $success = false;
+        $ketqua.= "<p class='mb-0'>Số lượng tồn không hợp lệ</p>";
+    } else { $success = true; }
 
-    if($result) {
-        $ketqua .= "Thêm thành công!!!";
-        // header('Location: ./index.php');
+    // Kiểm tra đơn giá
+    if($don_gia < 100000){
+        $success = false;
+        $ketqua.= "<p class='mb-0'>Đơn giá tối thiểu là 100.000</p>";
+    } else { $success = true; }
+    
+    // xử lý đuôi file
+    $file_ext = @strtolower(end(explode('.', $hinh_anh)));
+    $expensions = ['jpeg', 'jpg', 'png'];
+
+    if(!in_array($file_ext, $expensions)) {
+        $error_upload = true;
+        $hinh_anh = $pre_img;
+    }
+
+    if($error_upload) {
+        $success = false;
+        $ketqua .= "<p class='mb-0'>Vui lòng nhập file JPEG, JPG hoặc PNG</p>";
     } else {
-        $ketqua .= "Kiểm tra lại thông tin!!!";
+        // thêm hình vào server
+        move_uploaded_file($_FILES["hinh_anh"]["tmp_name"],"..\\Images\\".$hinh_anh);
+        $success = true;
+    }
+
+    if($success){
+        $now  = date("Y/m/d");
+        $sql = "INSERT INTO san_pham VALUES('$masp_new','$ten_sp','$ma_loai','$so_luong_ton','$hinh_anh','$don_gia','$mo_ta','$now')
+        ";
+        $result = mysqli_query($conn, $sql);
+    
+        if($result) {
+            header('Location: ./index.php');
+        } else {
+            $ketqua .= "Kiểm tra lại thông tin!!!";
+        }
     }
 } 
 
@@ -69,6 +116,14 @@ if(isset($_POST['Add'])) {
             <h3>Thêm sản phẩm mới</h3>
         </div>
         <hr class="mt-2">
+        <?php 
+        if($ketqua != '') {
+            $bg_color = $success? "bg-success" : "bg-danger";
+            echo "<div class='w-100 p-3 $bg_color bg-gradient opacity-75 rounded-3 mb-4'>";
+            echo $ketqua;
+            echo "</div>";
+        }
+        ?>
         <form action="" method="post" enctype="multipart/form-data">
         <div class="row mt-2">
             <div class="col-12">
@@ -79,7 +134,7 @@ if(isset($_POST['Add'])) {
 
                 <div class="mb-3">
                     <label class="form-label">Tên sản phẩm:</label>
-                    <input type="text" name="ten_sp" value="" class="form-control">
+                    <input type="text" name="ten_sp" value="<?php echo $ten_sp; ?>" class="form-control">
                 </div>
 
                 <div class="mb-3">
