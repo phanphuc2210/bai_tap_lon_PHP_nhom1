@@ -3,6 +3,11 @@ $page_title = 'Xóa sản phẩm!';
 include ('../includes/header_webdemo.php');
 require_once ('../database/connect.php');
 
+// Phải đăng nhập thì mới có thể truy cập
+if($isLogin == false) {
+    header("Location: ../login.php");
+}
+
 $masp = isset($_GET['masp'])? $_GET['masp'] : '';
 $ketqua = '';
 $success = false;
