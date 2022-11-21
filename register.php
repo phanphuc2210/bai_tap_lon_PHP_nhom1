@@ -52,14 +52,15 @@ if(isset($_POST['register'])) {
     } else {
         $phai = 1;
     }
-
+    $sql = "SELECT *
+            FROM nhan_vien 
+            WHERE Tai_khoan = '$tenDN'
+        ";
+    $result = mysqli_query($conn, $sql); 
+    $rows = mysqli_fetch_array($result);
+    print_r($rows);
     if($pass != $re_pass ){
         $error[] = 'Mặt khẩu không khớp!';
-        $sql = "SELECT *
-                FROM nhan_vien 
-                WHERE Tai_khoan = '$tenDN'
-            ";
-        $result = mysqli_query($conn, $sql); 
     } else if(mysqli_num_rows($result) > 0){
         $errors[] = "Tên đăng nhập đã tồn tại.";
     } else {
